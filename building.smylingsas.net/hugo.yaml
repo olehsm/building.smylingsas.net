@@ -1,0 +1,8 @@
+baseURL: https://building.smylingsas.net/
+languageCode: nb #ISO 639-1 Language Codes
+title: building.smylingsas.net
+author: Ole Halvor Smylingsås
+module:
+   hugoVersion:
+    extended: true
+    min: "0.112.0"

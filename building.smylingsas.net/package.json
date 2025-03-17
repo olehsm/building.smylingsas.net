@@ -1,0 +1,20 @@
+{
+   "name": "building.smylingsas.net",
+   "version": "1.0.0",
+   "main": "index.js",
+   "keywords": [],
+   "author": "",
+   "license": "ISC",
+   "description": "",
+   "hugo-bin": {
+      "buildTags": "extended"
+   },
+   "scripts": {
+      "start": "hugo server --buildDrafts --cleanDestinationDir",
+      "hugo": "hugo",
+      "hugo:build": "hugo --minify"
+   },
+   "dependencies": {
+      "hugo-bin": "^0.142.0"
+   }
+}
