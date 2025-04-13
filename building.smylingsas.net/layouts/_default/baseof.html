@@ -5,12 +5,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta author="{{ .Site.Author }}">
         <title>{{ .Site.Title }}</title>
-        {{ $styles := resources.Get "css/styles.css" }}
+        
+        {{ $css := resources.Get "css/site.css" }}
+        {{ $styles := $css | toCSS | minify | fingerprint }}
         <link href="{{ $styles.RelPermalink }}" rel="stylesheet" >
     </head>
     <body>
-        <div>
+        <section class="skeleton">
             {{- block "main" . -}}{{- end -}}
-        </div>
+        </section>
     </body>
 </html>
