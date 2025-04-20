@@ -1,8 +1,32 @@
-baseURL: https://building.smylingsas.net/
+baseURL: http://localhost:1313/
 languageCode: nb #ISO 639-1 Language Codes
 title: building.smylingsas.net
 author: Ole Halvor Smylingsås
 module:
    hugoVersion:
-    extended: true
-    min: "0.112.0"
+      extended: true
+      min: "0.112.0"
+markup:
+   markup.highlight:
+      anchorLineNos: false
+      codeFences: true
+      guessSyntax: false
+      hl_Lines: ""
+      hl_inline: false
+      lineAnchors: ""
+      lineNoStart: 1
+      lineNos: false
+      lineNumbersInTable: true
+      noClasses: true
+      noHl: false
+      style: "xcode"
+      tabWidth: 4
+canonifyURLs: false
+uglyURLs: false
+enableGitInfo: true
+params:
+   owner: "Ole Halvor Smylingsås"
+   favicon: "favicon.svg"
+   themecolor: "#eff0f3"
+   description: "Hjemmeside og blog for Ole Halvor Smylingsås"
+   keywords: "hjemmeside, blog, utvikling, programering"

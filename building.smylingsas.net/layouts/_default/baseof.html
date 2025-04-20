@@ -1,18 +1,12 @@
 <!DOCTYPE html>
 <html lang="{{ .Site.LanguageCode }}">
     <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta author="{{ .Site.Author }}">
-        <title>{{ .Site.Title }}</title>
-        
-        {{ $css := resources.Get "css/site.css" }}
-        {{ $styles := $css | toCSS | minify | fingerprint }}
-        <link href="{{ $styles.RelPermalink }}" rel="stylesheet" >
+        {{ partial "head.html" . }}
     </head>
     <body>
         <section class="skeleton">
             {{- block "main" . -}}{{- end -}}
         </section>
+        {{ partial "scripts.html" . }}
     </body>
 </html>

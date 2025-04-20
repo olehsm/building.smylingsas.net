@@ -1,0 +1,124 @@
+{
+    "name": "Smylingsas.net - Min lille utviklerblog",
+    "short_name": "Smylingsas.net",
+    "start_url": "/",
+    "description": "Mitt eget hjørne av internett hvor jeg publiserer prosjekter og enkelte tutorials, tips og triks om webutvikling.\n\nNettsiden er progressiv web app (PWA) og kan installeres på alle platformer",
+    "lang": "nb",
+    "dir": "ltr",
+    "theme_color": "#eff0f3",
+    "id": "smylingsas",
+    "background_color": "#eff0f3",
+    "scope": "/",
+    "scope_extensions": [
+      
+    ],
+    "icons": [
+        {
+          "src": "icon_512.png",
+          "sizes": "512x512",
+          "type": "image/png",
+          "purpose": "maskable"
+        },
+        {
+          "src": "icon_192.png",
+          "sizes": "192x192",
+          "type": "image/png",
+          "purpose": "any"
+        }
+      ],
+      "screenshots": [
+        {
+          "src": "/img/Screenshot 2023-10-18 181912.png",
+          "sizes": "464x850",
+          "type": "image/png",
+          "form_factor": "narrow"
+        },
+        {
+          "src": "/img/Screenshot 2022-11-13 164020.png",
+          "sizes": "1311x732",
+          "type": "image/png",
+          "form_factor": "wide"
+        }
+      ],
+      "related_applications": [
+        {
+          "platform": "windows",
+          "url": "https://smylingsas.net/manifest.json"
+        }
+      ],
+      "prefer_related_applications": false,
+      "handle_links": "preferred",
+      "launch_handler": {
+        "client_mode": ["navigate-existing", "auto"]
+      },
+      "shortcuts": [
+        {
+          "name": "Prosjektseksjon",
+          "short_name": "Prosjekter",
+          "description": "Oversikt over sideprosjekter",
+          "url": "/projects/",
+          "icons": [
+            {
+              "src": "icon_96.png",
+              "sizes": "96x96",
+              "type": "image/png",
+              "purpose": "any"
+            }
+          ]
+        },
+        {
+          "name": "Artikkelarkiv",
+          "short_name": "Blogg",
+          "description": "Liste over alle publiserte tekster",
+          "url": "/writings/",
+          "icons": [
+            {
+              "src": "icon_96.png",
+              "sizes": "96x96",
+              "type": "image/png",
+              "purpose": "any"
+            }
+          ]
+        },
+        {
+          "name": "Bokmerker",
+          "short_name": "Bokmerker",
+          "description": "Alle publiserte bokmerker",
+          "url": "/bookmarks/",
+          "icons": [
+            {
+              "src": "icon_96.png",
+              "sizes": "96x96",
+              "type": "image/png",
+              "purpose": "any"
+            }
+          ]
+        }
+      ],
+      "categories": [
+        "education",
+        "utilities"
+      ],
+      "orientation": "portrait",
+      "display": "standalone",
+      
+    "iarc_rating_id": "0",
+    "edge_side_panel": {
+      "preferred_width": 480
+    },
+    "display_override": [
+        "standalone",
+        "minimal-ui",
+        "window-controls-overlay"
+      ],
+      "share_target": {
+        "action": "/shared-content-receiver/",
+        "method": "GET",
+        "enctype": "application/x-www-form-urlencoded",
+        "params": {
+          "title": "name",
+          "text": "description",
+          "url": "link"
+        }
+      }
+}
