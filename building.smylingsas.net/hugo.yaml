@@ -1,7 +1,8 @@
 baseURL: http://localhost:1313/
 languageCode: nb #ISO 639-1 Language Codes
-title: building.smylingsas.net
+title: LOCAL building.smylingsas.net
 author: Ole Halvor Smylingsås
+enableRobotsTXT: true
 module:
    hugoVersion:
       extended: true
@@ -25,8 +26,11 @@ canonifyURLs: false
 uglyURLs: false
 enableGitInfo: true
 params:
-   owner: "Ole Halvor Smylingsås"
-   favicon: "favicon.svg"
+   favicon: "/favicon.svg"
    themecolor: "#eff0f3"
-   description: "Hjemmeside og blog for Ole Halvor Smylingsås"
-   keywords: "hjemmeside, blog, utvikling, programering"
+   description: Hjemmeside og blog for Ole Halvor Smylingsås
+   images:
+      - site-feature-image.jpg
+   title: Smylingsas.net
+   taxonomies:
+      series: series
