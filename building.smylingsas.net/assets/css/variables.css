@@ -1,0 +1,11 @@
+:root {
+    --header-height: 60px;
+    --sidebar-width: 65px;
+    --primary-color: #333;
+    --secondary-color: #B22424;
+    --text-color: white;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 2rem;
+    --font-base: 'Segoe UI', sans-serif;
+}
