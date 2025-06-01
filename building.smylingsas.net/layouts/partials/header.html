@@ -10,29 +10,28 @@
         </rect>
         <path fill="#fff" d="M73.00 64.41L73.00 64.41Q73.00 73.44 66.26 78.39Q59.52 83.34 47.33 83.34L47.33 83.34Q34.62 83.34 27.12 79.30L27.12 79.30L27.12 69.69Q37.72 74.84 47.57 74.84L47.57 74.84Q55.54 74.84 59.17 72.27Q62.80 69.69 62.80 65.35L62.80 65.35Q62.80 61.54 59.32 58.91Q55.83 56.27 46.92 52.87L46.92 52.87Q37.84 49.36 34.15 46.87Q30.46 44.38 28.73 41.27Q27.00 38.16 27.00 33.71L27.00 33.71Q27.00 25.80 33.45 21.23Q39.89 16.66 51.14 16.66L51.14 16.66Q62.10 16.66 71.65 21.00L71.65 21.00L68.08 29.38Q58.29 25.27 50.44 25.27L50.44 25.27Q43.88 25.27 40.48 27.35Q37.08 29.43 37.08 33.07L37.08 33.07Q37.08 36.58 40.01 38.90Q42.94 41.21 53.66 45.31L53.66 45.31Q61.69 48.30 65.53 50.88Q69.37 53.46 71.18 56.68Q73.00 59.90 73.00 64.41Z"></path>
     </svg>
-    <span class="site-logo-text">Smylingsas.net</span>
     </a>
 </div>
 
 <!-- Center Section: Search -->
 <div class="header-center">
-<input type="text" placeholder="Søk..." />
+    <input type="text" placeholder="Søk..." />
 </div>
 
 <!-- Right Section: Icons -->
 <div class="header-right">
-    <!--sun -->
-    <svg class="header-nav-logo" xmlns="http://www.w3.org/2000/svg" 
-        viewBox="0 0 24 24"
-        preserveAspectRatio="xMidYMid meet">
-        <path d="M17 12C17 14.7614 14.7614 17 12 17C9.23858 17 7 14.7614 7 12C7 9.23858 9.23858 7 12 7C14.7614 7 17 9.23858 17 12Z" stroke="currentColor" stroke-width="1.5" />
-        <path d="M11.9955 3H12.0045M11.9961 21H12.0051M18.3588 5.63599H18.3678M5.63409 18.364H5.64307M5.63409 5.63647H5.64307M18.3582 18.3645H18.3672M20.991 12.0006H21M3 12.0006H3.00898" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-    </svg>
+    <nav class="header-nav">
+        <ul class="header-nav">
+        {{ range .Site.Menus.header }}
+            <li>
+                <button class="header-nav-button" aria-label="{{ .Name }}">
+                    {{ with .Params.icon }}
+                        {{ partial (printf "icons/%s.svg.html" .) . }}
+                    {{ end }}
+                </button>
+            </li>
+        {{ end }}
+        </ul>
+    </nav>
 
-    <!-- moon-->
-    <svg class="header-nav-logo" xmlns="http://www.w3.org/2000/svg" 
-        viewBox="0 0 24 24"  
-        preserveAspectRatio="xMidYMid meet">
-        <path d="M21.5 14.0784C20.3003 14.7189 18.9301 15.0821 17.4751 15.0821C12.7491 15.0821 8.91792 11.2509 8.91792 6.52485C8.91792 5.06986 9.28105 3.69968 9.92163 2.5C5.66765 3.49698 2.5 7.31513 2.5 11.8731C2.5 17.1899 6.8101 21.5 12.1269 21.5C16.6849 21.5 20.503 18.3324 21.5 14.0784Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-    </svg>
 </div>

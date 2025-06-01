@@ -31,10 +31,11 @@
     gap: var(--spacing-sm);
 }
 
+
 .main {
     grid-area: main;
     overflow-y: auto;
-    background: #f0f0f0;
+    background-color: #161616
 }
 
 .content {

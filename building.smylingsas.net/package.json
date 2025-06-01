@@ -10,11 +10,13 @@
       "buildTags": "extended"
    },
    "scripts": {
-      "start": "hugo server --buildDrafts --cleanDestinationDir",
+      "start": "hugo server --disableFastRender --ignoreCache --noHTTPCache --buildDrafts --cleanDestinationDir",
       "hugo": "hugo",
-      "hugo:build": "hugo --minify"
+      "hugo:build": "hugo --minify && pagefind --site public",
+      "pagefind": "pagefind --site public --output-subdir ../static/pagefind"
    },
    "dependencies": {
-      "hugo-bin": "^0.142.0"
+      "hugo-bin": "^0.142.0",
+      "pagefind": "^1.3.0"
    }
 }

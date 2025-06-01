@@ -10,11 +10,11 @@
 			"extensions": [
 				"ms-azuretools.vscode-docker",
 				"budparr.language-hugo-vscode",
-				"eliostruyf.vscode-front-matter",
 				"PWABuilder.pwa-studio",
 				"eamodio.gitlens",
 				"dbaeumer.vscode-eslint"
 			]
 		}
-	}
+	},
+	"workspaceFolder": "building.smylingsas.net"
 }

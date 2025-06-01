@@ -25,6 +25,56 @@ markup:
 canonifyURLs: false
 uglyURLs: false
 enableGitInfo: true
+menu:
+   main:
+    - name: "Home"
+      url: "/"
+      weight: 1
+      identifier: "home"
+      params:
+        icon: "home"
+
+    - name: "Bookmarks"
+      url: "/bookmarks"
+      weight: 3
+      identifier: "bookmarks"
+      params:
+        icon: "bookmarks"
+
+    - name: "Projects"
+      url: "/projects"
+      weight: 4
+      identifier: "projects"
+      params:
+        icon: "projects"
+
+    - name: "blog"
+      url: "/blog"
+      weight: 2
+      identifier: "blog"
+      params:
+        icon: "blog"
+   header:
+      - name: "Network"
+        url: "#network"
+        weight: 20
+        params:
+         icon: "network"
+      - name: "Battery"
+        url: "#battery"
+        weight: 10 
+        params:
+         icon: "battery"
+      - name: "lightmode"
+        url: "#lightmode"
+        weight: 30
+        params:
+         icon: "sun"
+      - name: "darkmode"
+        url: "#darkmode"
+        weight: 30
+        params:
+         icon: "moon"
 params:
    favicon: "/favicon.svg"
    themecolor: "#eff0f3"

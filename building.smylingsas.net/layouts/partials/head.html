@@ -72,6 +72,7 @@
 {{ $bundle := cond hugo.IsProduction ($bundleBase | resources.Fingerprint) $bundleBase }}
 
 <link rel="stylesheet" href="{{ $bundle.RelPermalink }}" {{ with $bundle.Data.Integrity }}integrity="{{ . }}" crossorigin="anonymous"{{ end }}>
+<link rel="stylesheet" href="/pagefind/pagefind-ui.css">
 
 
 
