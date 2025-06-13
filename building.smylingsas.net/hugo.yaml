@@ -57,22 +57,22 @@ menu:
    header:
       - name: "Network"
         url: "#network"
-        weight: 20
+        weight: 30
         params:
          icon: "network"
       - name: "Battery"
         url: "#battery"
-        weight: 10 
+        weight: 40 
         params:
          icon: "battery"
       - name: "lightmode"
         url: "#lightmode"
-        weight: 30
+        weight: 10
         params:
          icon: "sun"
       - name: "darkmode"
         url: "#darkmode"
-        weight: 30
+        weight: 20
         params:
          icon: "moon"
 params:
