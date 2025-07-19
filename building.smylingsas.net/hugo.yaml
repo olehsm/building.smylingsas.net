@@ -48,7 +48,7 @@ menu:
       params:
         icon: "projects"
 
-    - name: "blog"
+    - name: "Blog"
       url: "/blog"
       weight: 2
       identifier: "blog"
