@@ -1,0 +1,12 @@
+.list-container{
+    margin: 3rem;
+}
+
+.list-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    gap: 5rem 3rem; 
+    list-style-type: none;   
+    padding:0;
+    margin: 0;
+}

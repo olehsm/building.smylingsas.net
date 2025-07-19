@@ -1,10 +1,10 @@
 {{ define "main" }}
-    {{ .Content -}}
-    <ul>
-        {{ range .Pages -}}
-            <li>
-                <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
-            </li>
-        {{- end }}
-    </ul>
+    <div class="list-container">
+        {{ .Content -}}
+        <ul class="list-grid">
+            {{ range .Pages -}}
+                {{ .Render "summary"}}
+            {{- end }}
+        </ul>    
+    </div>
 {{ end }}
