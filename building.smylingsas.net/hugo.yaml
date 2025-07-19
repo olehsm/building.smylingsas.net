@@ -82,5 +82,4 @@ params:
    images:
       - site-feature-image.jpg
    title: Smylingsas.net
-   taxonomies:
-      series: series
+   

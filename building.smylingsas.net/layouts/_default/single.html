@@ -1,3 +1,11 @@
 {{ define "main" }}
+{{ if .Params.image }}
+  {{ with .Resources.Get .Params.image }}
+    <div >
+      <img src="{{ .RelPermalink}}" alt="Header image" />
+    </div>
+  {{ end }}
+{{ end }}
+<h1>{{ .Page.Title }}</h1>
     {{- .Content -}}
 {{ end }}
