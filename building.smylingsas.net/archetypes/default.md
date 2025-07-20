@@ -1,10 +1,8 @@
 ---
 title: '{{ replace .File.ContentBaseName "-" " " | title }}'
+subtitle: null
 date:  {{ .Date }}
 draft: true
-pageresources: []
-tags: null
-author: Ole Halvor Smylingsås
 description: null
 image: null
 ---
