@@ -4,9 +4,32 @@
 
 .list-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
     gap: 5rem 3rem; 
     list-style-type: none;   
     padding:0;
     margin: 0;
+}
+
+.title.hero {
+    margin-top: 80px;
+    margin-bottom: 70px;
+}
+
+.container {
+    padding-right: 35px;
+    padding-left: 35px;
+}
+
+
+.h1-list {
+    font-size: 3.875rem;
+    line-height: 4.25rem;
+    letter-spacing: -3.2px;
+}
+
+.list-subtitle {
+    font-size: 1.375rem;
+    line-height: 2rem;
+    letter-spacing: -0.5px;
 }
