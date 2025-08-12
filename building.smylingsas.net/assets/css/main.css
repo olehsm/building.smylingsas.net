@@ -13,4 +13,32 @@ main a {
     color: var(--secondary-color);
 }
 
+.page-wrapper {
+        display: grid;
+        grid-template-columns: 
+            1fr 
+            min(65ch, calc(100% - 30px- var(--sidebar-width))) 
+            1fr;
+        grid-column-gap: 15px;
+        font-size:  2rem;
+        line-height: 1.8;
+    }
+
+
+.page-wrapper > * {
+    grid-column: 2;
+}
+
+.svg-calendar {
+    width: 20px;
+    height: 20px;
+    color: var(--text-color);
+    transition: color 0.3s ease;
+}
+
+
+.svg-calendar path {
+    fill: none;
+}
+
 
