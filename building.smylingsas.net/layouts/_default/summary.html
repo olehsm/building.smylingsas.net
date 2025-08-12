@@ -2,11 +2,15 @@
     <a class="item__link" href='{{ .Permalink }}'>
         <article class="item">
             <div class="visual">
-                {{ with .Resources.GetMatch .Params.image }}
-                    <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}">
-                {{ else }}
-                    <img src="/images/default.jpg" alt="Default image" title="oops">
-                {{ end }}
+                {{ with .Resources.GetMatch .Params.image }} 
+    <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}">
+{{ else }}
+    {{ with resources.Get "images/shrug.svg" }}
+        <img src="{{ .RelPermalink }}" alt="No image found. Showing the default image" title="Default image">
+    {{ end }}
+{{ end }}
+
+
             </div>
             <div class="item__body">
                 <h2 class="item__title">
