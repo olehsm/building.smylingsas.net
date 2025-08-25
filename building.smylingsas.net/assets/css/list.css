@@ -4,11 +4,12 @@
 
 .list-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    grid-template-columns: repeat(auto-fill,minmax(350px,1fr));
     gap: 5rem 3rem; 
     list-style-type: none;   
     padding:0;
     margin: 0;
+    align-items: stretch;
 }
 
 .title.hero {

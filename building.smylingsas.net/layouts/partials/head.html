@@ -66,9 +66,10 @@
 {{ $header := resources.Get "css/header.css" }}
 {{ $sidebar := resources.Get "css/sidebar.css" }}
 {{ $list := resources.Get "css/list.css" }}
+{{ $summary := resources.Get "css/summary.css" }}
 {{ $main := resources.Get "css/main.css" }}
 
-{{ $bundleBase := slice $reset $variables $layout $header $sidebar $list $main| resources.Concat "css/bundle.css" | resources.Minify }}
+{{ $bundleBase := slice $reset $variables $layout $header $sidebar $list $summary $main| resources.Concat "css/bundle.css" | resources.Minify }}
 
 {{ $bundle := cond hugo.IsProduction ($bundleBase | resources.Fingerprint) $bundleBase }}
 

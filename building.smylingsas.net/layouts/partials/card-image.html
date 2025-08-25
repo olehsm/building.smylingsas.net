@@ -1,0 +1,34 @@
+{{ with .Resources.GetMatch .Params.image }}
+  {{ $imgLow := .Resize "20x" | images.Convert "webp" }}
+  {{ $img400 := .Resize "400x" | images.Convert "webp" }}
+  {{ $img800 := .Resize "800x" | images.Convert "webp" }}
+  {{ $img1200 := .Resize "1200x" | images.Convert "webp" }}
+
+  <picture>
+    <source
+      srcset="{{ $img400.RelPermalink }} 400w, {{ $img800.RelPermalink }} 800w, {{ $img1200.RelPermalink }} 1200w"
+      sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw"
+      type="image/webp"
+    >
+    <img
+      src="{{ $img400.RelPermalink }}"
+      width="{{ $img400.Width }}"
+      height="{{ $img400.Height }}"
+      alt="{{ $.Title }}"
+      loading="lazy"
+      class="lazy-image"
+      style="background-image: url('{{ $imgLow.RelPermalink }}');"
+    >
+  </picture>
+{{ else }}
+  {{ with resources.Get "images/shrug.svg" }}
+    <img 
+      src="{{ .RelPermalink }}" 
+      alt="No image found. Showing the default image" 
+      title="Default image" 
+      width="300" 
+      height="300"
+      loading="lazy"
+    >
+  {{ end }}
+{{ end }}
