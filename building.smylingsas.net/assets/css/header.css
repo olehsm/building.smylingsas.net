@@ -61,7 +61,14 @@
     font-size: 1rem;
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 4px;
-    background-color: #161616
+    background-color: #161616;
+    color: var(--text-color)
+}
+
+.header input[type="text"]::placeholder {
+  font-weight: bold;
+  
+  color: var(--text-color)
 }
 
 

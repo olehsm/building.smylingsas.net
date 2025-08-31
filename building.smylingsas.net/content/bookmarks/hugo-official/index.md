@@ -4,6 +4,6 @@ date:  2025-06-13T22:08:20Z
 draft: true
 tags: null
 description: null
-image: null
+image: hugo-framwork-homepage.jpg
 externalLink: null
 ---

@@ -1,34 +1,56 @@
-{{ with .Resources.GetMatch .Params.image }}
-  {{ $imgLow := .Resize "20x" | images.Convert "webp" }}
-  {{ $img400 := .Resize "400x" | images.Convert "webp" }}
-  {{ $img800 := .Resize "800x" | images.Convert "webp" }}
-  {{ $img1200 := .Resize "1200x" | images.Convert "webp" }}
+{{ with .Params.image }}
+  {{ with $img := $.Resources.GetMatch . }}
 
-  <picture>
-    <source
-      srcset="{{ $img400.RelPermalink }} 400w, {{ $img800.RelPermalink }} 800w, {{ $img1200.RelPermalink }} 1200w"
-      sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw"
-      type="image/webp"
-    >
-    <img
-      src="{{ $img400.RelPermalink }}"
-      width="{{ $img400.Width }}"
-      height="{{ $img400.Height }}"
-      alt="{{ $.Title }}"
-      loading="lazy"
-      class="lazy-image"
-      style="background-image: url('{{ $imgLow.RelPermalink }}');"
-    >
-  </picture>
+    {{ $img400 := $img.Fill "400x225" }}
+    {{ $img800 := $img.Fill "800x450" }}
+    {{ $img1200 := $img.Fill "1200x675" }}
+    {{ $img2300 := $img.Fill "2300x1294" }}
+    {{ $imgLow := $img.Fill "20x11" }}
+
+    <picture>
+      <source
+        type="{{ $img.MediaType }}"
+        srcset="{{ $img400.RelPermalink }} 400w, {{ $img800.RelPermalink }} 800w, {{ $img1200.RelPermalink }} 1200w, {{ $img2300.RelPermalink }} 2300w"
+        sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, (max-width: 1920px) 33vw, 80vw">
+      <img
+        src="{{ $img2300.RelPermalink }}"
+        srcset="{{ $img400.RelPermalink }} 400w, {{ $img800.RelPermalink }} 800w, {{ $img1200.RelPermalink }} 1200w, {{ $img2300.RelPermalink }} 2300w"
+        sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, (max-width: 1920px) 33vw, 80vw"
+        width="{{ $img400.Width }}"
+        height="{{ $img400.Height }}"
+        alt="{{ with .Params.imageAlt }}{{ . }}{{ else }}{{ $.Title }}{{ end }}"
+        loading="lazy"
+        class="lazy-image"
+        style="background-image: url('{{ $imgLow.RelPermalink }}');" />
+    </picture>
+
+    <noscript>
+      <img
+        src="{{ $img2300.RelPermalink }}"
+        width="{{ $img2300.Width }}"
+        height="{{ $img2300.Height }}"
+        alt="{{ with .Params.imageAlt }}{{ . }}{{ else }}{{ $.Title }}{{ end }}">
+    </noscript>
+
+  {{ else }}
+    {{ with resources.Get "images/shrug.svg" }}
+      <img 
+        src="{{ .RelPermalink }}" 
+        alt="No image found." 
+        title="Default image" 
+        width="300" 
+        height="225"
+        loading="lazy">
+    {{ end }}
+  {{ end }}
 {{ else }}
   {{ with resources.Get "images/shrug.svg" }}
     <img 
       src="{{ .RelPermalink }}" 
-      alt="No image found. Showing the default image" 
+      alt="No image specified." 
       title="Default image" 
       width="300" 
-      height="300"
-      loading="lazy"
-    >
+      height="225"
+      loading="lazy">
   {{ end }}
 {{ end }}
