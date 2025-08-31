@@ -62,12 +62,13 @@
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 4px;
     background-color: #161616;
-    color: var(--text-color)
+    color: var(--text-color);
+    opacity: 0.5;
 }
 
 .header input[type="text"]::placeholder {
   font-weight: bold;
-  
+  opacity: 0.5;
   color: var(--text-color)
 }
 
