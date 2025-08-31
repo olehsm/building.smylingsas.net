@@ -82,4 +82,9 @@ params:
    images:
       - site-feature-image.jpg
    title: Smylingsas.net
+
+pagination:
+  pagerSize: 10
+
+
    
