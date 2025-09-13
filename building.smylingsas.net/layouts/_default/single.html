@@ -1,13 +1,30 @@
 {{ define "main" }}
-<div class="layout layout--list">
-	{{ if .Params.image }}
+<div class="layout layout--article">
+	<section class="article-image">
+		<div class="container">
+			{{ if .Params.image }}
 		{{ with .Resources.Get .Params.image }}
 			<div >
 				<img src="{{ .RelPermalink}}" alt="Header image" />
 			</div>
 		{{ end }}
 	{{ end }}
-	<h1>{{ .Page.Title }}</h1>
-	{{- .Content -}}
+		</div>	
+	</section>
+	
+	<section class="title hero">
+		<div class="container">
+			<h1 class="h1-list">
+				{{.Title}}
+			</h1>
+			<p class="list-subtitle">{{.Params.subtitle}}</p>
+		</div>
+	</section>
+	<section class="article-content">
+		<div class="container">
+		{{- .Content -}}
+		</div>
+	</section>
+	
 </div>
 {{ end }}

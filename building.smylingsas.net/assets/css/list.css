@@ -46,6 +46,12 @@
     margin-inline: auto;
 }
 
+.layout--article .container {
+    max-width: 1000px;
+    padding-inline: clamp(1rem, 2.5vw, 4rem);
+    margin-inline: auto;
+}
+
 .layout--list {
   display: grid;
   grid-template-rows: auto 1fr auto;
