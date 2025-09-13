@@ -1,7 +1,22 @@
+html {
+    font-size: 100%; 
+}
+
+
 body {
-    font-family: var(--font-base);
+    font-family: var(--font-family);
     color: var(--text-color);
     background-color: #4d4c4c;
+    font-size: var(--font-base);
+}
+
+h1 {
+  font-size: var(--font-3xl);
+  font-size: clamp(2rem, 4vw, 3.5rem);
+}
+
+p {
+  font-size: var(--font-sm);
 }
 
 
@@ -9,25 +24,28 @@ a {
     text-decoration: none;
 }
 
+
 main a {
     color: var(--secondary-color);
 }
 
+
 .page-wrapper {
-        display: grid;
-        grid-template-columns: 
-            1fr 
-            min(65ch, calc(100% - 30px- var(--sidebar-width))) 
-            1fr;
-        grid-column-gap: 15px;
-        font-size:  2rem;
-        line-height: 1.8;
-    }
+    display: grid;
+    grid-template-columns: 
+        1fr 
+        min(65ch, calc(100% - 30px- var(--sidebar-width))) 
+        1fr;
+    grid-column-gap: 15px;
+    font-size:  2rem;
+    line-height: 1.8;
+}
 
 
 .page-wrapper > * {
     grid-column: 2;
 }
+
 
 .svg-calendar {
     width: 20px;
