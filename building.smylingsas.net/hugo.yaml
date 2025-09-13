@@ -57,11 +57,13 @@ menu:
    header:
       - name: "Network"
         url: "#network"
+        identifier: "networkInfoModal"
         weight: 30
         params:
          icon: "network"
       - name: "Battery"
         url: "#battery"
+        identifier: "batteryInfoModal"
         weight: 40 
         params:
          icon: "battery"

@@ -24,7 +24,7 @@
         <ul class="header-nav">
         {{ range .Site.Menus.header }}
             <li>
-                <button class="header-nav-button" aria-label="{{ .Name }}">
+                <button type="button" class="header-nav-button" aria-label="{{ .Name }}" data-modal-target="{{ .Identifier }}">
                     {{ with .Params.icon }}
                         {{ partial (printf "icons/%s.svg.html" .) . }}
                     {{ end }}
