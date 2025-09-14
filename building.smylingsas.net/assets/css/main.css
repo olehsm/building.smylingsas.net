@@ -30,6 +30,12 @@ main a {
 }
 
 
+ol,li {
+    margin:0;
+	padding:0;
+}
+
+
 .page-wrapper {
     display: grid;
     grid-template-columns: 

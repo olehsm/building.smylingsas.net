@@ -45,3 +45,14 @@ document.querySelectorAll('dialog').forEach((modal) => {
     }
   });
 });
+
+// Open search modal
+const input = document.getElementById('searchInput');
+  const dialog = document.getElementById('searchDialog');
+
+  input.addEventListener('input', () => {
+    if (input.value.trim() !== '' && !dialog.open) {
+      input.value = '';
+      dialog.showModal(); // Opens the dialog
+    }
+  });

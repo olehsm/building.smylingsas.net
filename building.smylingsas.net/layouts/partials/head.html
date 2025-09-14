@@ -1,12 +1,15 @@
 <meta charset="utf-8" />
-<meta name="description" content="{{ .Description }}">
+<meta name="description" content="{{ .Params.description }}">
 <meta name="application-name" content="Smylingsas.net">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="theme-color" content="{{ $.Site.Params.themecolor }}">
 <meta name="viewport" content="width=device-width, initial-scale=1" />
+{{ with .Params.keywords }}
+    <meta name="keywords" content="{{ delimit . ", " }}">
+{{ end }}
 {{hugo.Generator}}
 
-<title>{{ .Site.Title }}</title>
+<title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
 
 <!-- Open Graph meta tags -->
 {{ template "_internal/opengraph.html" . }}
@@ -73,8 +76,9 @@
 
 {{ $bundle := cond hugo.IsProduction ($bundleBase | resources.Fingerprint) $bundleBase }}
 
-<link rel="stylesheet" href="{{ $bundle.RelPermalink }}" {{ with $bundle.Data.Integrity }}integrity="{{ . }}" crossorigin="anonymous"{{ end }}>
 <link rel="stylesheet" href="/pagefind/pagefind-ui.css">
+<link rel="stylesheet" href="{{ $bundle.RelPermalink }}" {{ with $bundle.Data.Integrity }}integrity="{{ . }}" crossorigin="anonymous"{{ end }}>
+
 
 
 

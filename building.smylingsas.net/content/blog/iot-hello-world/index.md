@@ -5,13 +5,14 @@ draft: true
 pageresources: []
 tags: null
 author: Ole Halvor Smylingsås
-description: null
+description: 'En liten tutorial som plutselig ble større. hello world med lyspære ble til dev container, kopire dockerfiler til remote host med ssh osv'
 image: RPI_Twitter_COLOUR.webp
+keywords: 'iot dotnet docker'
 ---
 
 <!--more-->
 
-Hello, World fra et IOT perspektiv!
+# Hello, World fra et IOT perspektiv!
 
 Hvordan sette opp en rasberry pi
 vise biler av deler og fremdrift

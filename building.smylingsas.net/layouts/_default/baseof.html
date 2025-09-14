@@ -15,7 +15,7 @@
                 {{- block "main" . -}}{{- end -}}
             </main>
         </div>
-        {{/*  {{- partial "search.html" . -}}  */}}
+        
 
         <dialog id="batteryInfoModal">
   <div class="modal-content">
@@ -138,6 +138,7 @@
             }
         </script>
 </dialog>
+        {{- partial "search.html" . -}}
         {{ partial "scripts.html" . }}
     </body>
 </html>

@@ -16,4 +16,9 @@
   --font-xl: 1.5rem;
   --font-2xl: 2rem;
   --font-3xl: 3rem;
+  --pagefind-ui-primary: #eeeeee ;
+  --pagefind-ui-text: #eeeeee ;
+  --pagefind-ui-background: #161616;
+  --pagefind-ui-border: rgba(255, 255, 255, 0.1) ;
+  --pagefind-ui-tag: #152028 ;
 }
