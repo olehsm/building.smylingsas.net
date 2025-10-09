@@ -29,8 +29,8 @@ dotnet new
 dotnet build
 dotnet run (pwd må da være prosjektet du skal kjøre. det holder ikke med solution)
 dotnet publish --runtime linux-arm64 --self-contained
-ssh pi@rasberrypi mkdir ~/<Navn på prosjekt>
-scp -r <path to files>/* olehsm@rpi3b.local:~/LedBlink
+ssh pi@rasberrypi mkdir ~/< Navn på prosjekt >
+scp -r < path to files >/* olehsm@rpi3b.local:~/LedBlink
 chmod +x ./LedBlink (inne på target)
 
 vise hvordan man opprettet en ferdig dev container med .net8

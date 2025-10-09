@@ -41,7 +41,7 @@
 }
 
 .layout--list .container {
-    max-width: 2000px;
+    /* max-width: 2000px; */
     padding-inline: clamp(1rem, 2.5vw, 4rem);
     margin-inline: auto;
 }
