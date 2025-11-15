@@ -59,9 +59,9 @@
     flex: 1;
     padding: 6px 10px;
     font-size: 1rem;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--muted-border);
     border-radius: 4px;
-    background-color: #161616;
+    background-color: var(--input-bg);
     color: var(--text-color);
     opacity: 0.5;
 }
@@ -100,9 +100,13 @@
 	text-decoration: none;
 }
 
+/* Theme icon slots in the single toggle button */
+.theme-icon { display: none; }
+.theme-icon.active { display: block; }
+
 
 .header-nav-button:hover,
 .header-nav-link:hover {
-	background-color: rgba(255, 255, 255, 0.1);
+    background-color: var(--hover-bg);
 	border-radius: 4px;
 }

@@ -22,7 +22,23 @@
 <div class="header-right">
     <nav class="header-nav">
         <ul class="header-nav">
+        <!-- Theme toggle button (single control for auto/light/dark) -->
+        <li>
+            <button id="themeToggleBtn" type="button" class="header-nav-button" aria-label="Bytt tema" data-theme-toggle>
+                <span class="theme-icon theme-icon-auto">
+                    {{ partial "icons/time.svg.html" . }}
+                </span>
+                <span class="theme-icon theme-icon-light">
+                    {{ partial "icons/sun.svg.html" . }}
+                </span>
+                <span class="theme-icon theme-icon-dark">
+                    {{ partial "icons/moon.svg.html" . }}
+                </span>
+            </button>
+        </li>
+
         {{ range .Site.Menus.header }}
+            {{ if and (ne .Identifier "lightmode") (ne .Identifier "darkmode") (ne .Identifier "automode") }}
             <li>
                 <button type="button" class="header-nav-button" aria-label="{{ .Name }}" data-modal-target="{{ .Identifier }}">
                     {{ with .Params.icon }}
@@ -30,6 +46,7 @@
                     {{ end }}
                 </button>
             </li>
+            {{ end }}
         {{ end }}
         </ul>
     </nav>

@@ -26,6 +26,42 @@
 	--pagefind-ui-border-width: 1px;
 }
 
+/* Light theme overrides when html[data-theme="light"] is set */
+html[data-theme="light"] {
+	/* Scope B: medium-scope visual variables (light overrides) */
+	--bg-color: #eff0f3;
+	--card-bg: #eff0f3;
+	--input-bg: #f3f4f6;
+	--border-color: rgba(0,0,0,0.08);
+	--muted-border: rgba(0,0,0,0.08);
+	--hover-bg: rgba(0,0,0,0.04);
+	--shadow-default: rgba(0,0,0,0.08);
+	--backdrop-bg: rgba(0,0,0,0.4);
+	--inset-shadow-top: rgba(255,255,255,0.02);
+	--inset-shadow-bottom: rgba(0,0,0,0.06);
+	--primary-color: #c4c8cc;
+	--secondary-color: #B22424;
+	--text-color: #111111;
+	--pagefind-ui-background: #ffffff !important;
+	--pagefind-ui-border: rgba(0,0,0,.08);
+	--pagefind-ui-tag: #111111;
+	--pagefind-ui-text: var(--text-color);
+}
+
+/* Scope B: medium-scope visual variables (dark defaults) */
+:root {
+	--bg-color: #4d4c4c; /* site background */
+	--card-bg: #161616; /* cards, panels, main content background */
+	--input-bg: #161616; /* inputs and textareas */
+	--border-color: #2a2a2a; /* general border color for panels */
+	--muted-border: rgba(255,255,255,0.1); /* subtle borders / input borders in dark */
+	--hover-bg: rgba(255,255,255,0.1); /* hover backgrounds for nav/buttons */
+	--shadow-default: rgba(0,0,0,0.5); /* general elevated shadow */
+	--backdrop-bg: rgba(0,0,0,0.6); /* dialog backdrop */
+	--inset-shadow-top: rgba(255,255,255,0.05);
+	--inset-shadow-bottom: rgba(0,0,0,0.4);
+}
+
 .pagefind-ui__search-input.svelte-e9gkc3 {
 	color: var(--text-color) !important;
 	opacity: 0.5;

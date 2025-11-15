@@ -69,11 +69,19 @@ menu:
          icon: "battery"
       - name: "lightmode"
         url: "#lightmode"
+        identifier: "lightmode"
         weight: 10
         params:
          icon: "sun"
+      - name: "automode"
+        url: "#automode"
+        identifier: "automode"
+        weight: 15
+        params:
+         icon: "time"
       - name: "darkmode"
         url: "#darkmode"
+        identifier: "darkmode"
         weight: 20
         params:
          icon: "moon"

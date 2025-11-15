@@ -6,7 +6,7 @@ html {
 body {
     font-family: var(--font-family);
     color: var(--text-color);
-    background-color: #4d4c4c;
+  background-color: var(--bg-color);
     font-size: var(--font-base);
 }
 
@@ -71,14 +71,14 @@ dialog {
   border: none;
   border-radius: 6px;
   background-color: var(--primary-color);
-  color: #fff;
+  color: var(--text-color);
   width: min(90vw, 500px);
   padding: 0;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 10px var(--shadow-default);
 }
 
 dialog::backdrop {
-  background: rgba(0, 0, 0, 0.6);
+  background: var(--backdrop-bg);
 }
 
 .modal-content {
