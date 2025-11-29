@@ -4,97 +4,94 @@ title: LOCAL building.smylingsas.net
 author: Ole Halvor Smylingsås
 enableRobotsTXT: true
 module:
-   hugoVersion:
-      extended: true
-      min: "0.112.0"
+    hugoVersion:
+        extended: true
+        min: "0.112.0"
 markup:
-   markup.highlight:
-      anchorLineNos: false
-      codeFences: true
-      guessSyntax: false
-      hl_Lines: ""
-      hl_inline: false
-      lineAnchors: ""
-      lineNoStart: 1
-      lineNos: false
-      lineNumbersInTable: true
-      noClasses: true
-      noHl: false
-      style: "xcode"
-      tabWidth: 4
+    markup.highlight:
+        anchorLineNos: false
+        codeFences: true
+        guessSyntax: false
+        hl_Lines: ""
+        hl_inline: false
+        lineAnchors: ""
+        lineNoStart: 1
+        lineNos: false
+        lineNumbersInTable: true
+        noClasses: true
+        noHl: false
+        style: "xcode"
+        tabWidth: 4
 canonifyURLs: false
 uglyURLs: false
 enableGitInfo: true
 menu:
-   main:
-    - name: "Home"
-      url: "/"
-      weight: 1
-      identifier: "home"
-      params:
-        icon: "home"
+    main:
+        - name: "Home"
+          url: "/"
+          weight: 1
+          identifier: "home"
+          params:
+              icon: "home"
 
-    - name: "Bookmarks"
-      url: "/bookmarks"
-      weight: 3
-      identifier: "bookmarks"
-      params:
-        icon: "bookmarks"
+        - name: "Bookmarks"
+          url: "/bookmarks"
+          weight: 3
+          identifier: "bookmarks"
+          params:
+              icon: "bookmarks"
 
-    - name: "Projects"
-      url: "/projects"
-      weight: 4
-      identifier: "projects"
-      params:
-        icon: "projects"
+        - name: "Projects"
+          url: "/projects"
+          weight: 4
+          identifier: "projects"
+          params:
+              icon: "projects"
 
-    - name: "Blog"
-      url: "/blog"
-      weight: 2
-      identifier: "blog"
-      params:
-        icon: "blog"
-   header:
-      - name: "Network"
-        url: "#network"
-        identifier: "networkInfoModal"
-        weight: 30
-        params:
-         icon: "network"
-      - name: "Battery"
-        url: "#battery"
-        identifier: "batteryInfoModal"
-        weight: 40 
-        params:
-         icon: "battery"
-      - name: "lightmode"
-        url: "#lightmode"
-        identifier: "lightmode"
-        weight: 10
-        params:
-         icon: "sun"
-      - name: "automode"
-        url: "#automode"
-        identifier: "automode"
-        weight: 15
-        params:
-         icon: "time"
-      - name: "darkmode"
-        url: "#darkmode"
-        identifier: "darkmode"
-        weight: 20
-        params:
-         icon: "moon"
+        - name: "Blog"
+          url: "/blog"
+          weight: 2
+          identifier: "blog"
+          params:
+              icon: "blog"
+    header:
+        - name: "Network"
+          url: "#network"
+          identifier: "networkInfoModal"
+          weight: 30
+          params:
+              icon: "network"
+        - name: "Battery"
+          url: "#battery"
+          identifier: "batteryInfoModal"
+          weight: 40
+          params:
+              icon: "battery"
+        - name: "lightmode"
+          url: "#lightmode"
+          identifier: "lightmode"
+          weight: 10
+          params:
+              icon: "sun"
+        - name: "automode"
+          url: "#automode"
+          identifier: "automode"
+          weight: 15
+          params:
+              icon: "time"
+        - name: "darkmode"
+          url: "#darkmode"
+          identifier: "darkmode"
+          weight: 20
+          params:
+              icon: "moon"
 params:
-   favicon: "/favicon.svg"
-   themecolor: "#eff0f3"
-   description: Hjemmeside og blog for Ole Halvor Smylingsås
-   images:
-      - site-feature-image.jpg
-   title: Smylingsas.net
+    favicon: "/favicon.svg"
+    themecolor: "#eff0f3"
+    description: Hjemmeside og blog for Ole Halvor Smylingsås
+    images:
+        - site-feature-image.jpg
+    title: Smylingsas.net
 
 pagination:
-  pagerSize: 10
-
-
-   
+    pagerSize: 10

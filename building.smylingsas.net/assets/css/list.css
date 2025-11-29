@@ -8,13 +8,11 @@
     align-items: stretch;
 }
 
-
 .h1-list {
     font-size: clamp(2.25rem, 6vw, 3.875rem);
     line-height: clamp(2.5rem, 6.5vw, 4.25rem);
     letter-spacing: clamp(-1px, -0.5vw, -3.2px);
 }
-
 
 .list-subtitle {
     font-size: clamp(1rem, 2vw, 1.375rem);
@@ -33,9 +31,6 @@
     gap: 10px;
 }
 
-
-
-
 .layout--article {
     padding-block: clamp(3rem, 6vw, 6rem);
 }
@@ -53,26 +48,22 @@
 }
 
 .layout--list {
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  min-height: calc(100dvh - 67px);
-  row-gap: clamp(3rem, 5vw, 6rem); 
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: calc(100dvh - 67px);
+    row-gap: clamp(3rem, 5vw, 6rem);
 }
-
 
 .title.hero {
-  padding-top: clamp(4rem, 10vh, 8rem);
+    padding-top: clamp(4rem, 10vh, 8rem);
 }
-
 
 .pagination {
-  margin-bottom: clamp(1.5rem, 3vh, 3rem);
+    margin-bottom: clamp(1.5rem, 3vh, 3rem);
 }
 
-
-
 .something a {
-    color: var(--text-color)
+    color: var(--text-color);
 }
 
 .something a.active {

@@ -1,14 +1,12 @@
 <li>
-  <a class="item__link" href="{{ .Permalink }}">
-    <article class="list-grid-item">
-      <div class="visual image-blur-wrapper">
-        {{ partial "card-image.html" . }}
-      </div>
-      <div class="item__body">
-        <h2 class="item__title">
-          {{ .Title }}
-        </h2>
-      </div>
-    </article>
-  </a>
+    <a class="item__link" href="{{ .Permalink }}">
+        <article class="list-grid-item">
+            <div class="visual image-blur-wrapper">
+                {{ partial "card-image.html" . }}
+            </div>
+            <div class="item__body">
+                <h2 class="item__title">{{ .Title }}</h2>
+            </div>
+        </article>
+    </a>
 </li>

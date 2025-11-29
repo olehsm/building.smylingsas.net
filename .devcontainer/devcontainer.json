@@ -1,20 +1,20 @@
 // See https://containers.dev/implementors/json_reference/ for configuration reference
 {
-	"name": "Dev container for building.smylingsas.net",
-	"build": {
-		"dockerfile": "Dockerfile"
-	},
-	"remoteUser": "node",
-	"customizations": {
-		"vscode": {
-			"extensions": [
-				"ms-azuretools.vscode-docker",
-				"budparr.language-hugo-vscode",
-				"PWABuilder.pwa-studio",
-				"eamodio.gitlens",
-				"dbaeumer.vscode-eslint"
-			]
-		}
-	},
-	"workspaceFolder": "building.smylingsas.net"
+    "name": "Dev container for building.smylingsas.net",
+    "build": {
+        "dockerfile": "Dockerfile"
+    },
+    "remoteUser": "node",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-azuretools.vscode-docker",
+                "budparr.language-hugo-vscode",
+                "PWABuilder.pwa-studio",
+                "eamodio.gitlens",
+                "dbaeumer.vscode-eslint"
+            ]
+        }
+    },
+    "workspaceFolder": "building.smylingsas.net"
 }
