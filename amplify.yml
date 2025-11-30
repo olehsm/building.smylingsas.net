@@ -1,0 +1,21 @@
+version: 1
+frontend:
+  phases:
+    preBuild:
+      commands:
+        - cd building.smylingsas.net
+        - npm ci
+        - 'HUGO_VERSION=$(cat ../.hugo-version 2>/dev/null || echo "0.145.0")'
+        - 'wget -qO /tmp/hugo.tar.gz "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_Linux-64bit.tar.gz"'
+        - mkdir -p /tmp/hugo && tar -xzf /tmp/hugo.tar.gz -C /tmp/hugo --strip-components=1
+        - export PATH=/tmp/hugo:$PATH
+    build:
+      commands:
+        - npm run hugo:build
+  artifacts:
+    baseDirectory: building.smylingsas.net/public
+    files:
+      - '**/*'
+  cache:
+    paths:
+      - building.smylingsas.net/node_modules/**/*
