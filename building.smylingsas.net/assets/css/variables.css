@@ -26,6 +26,15 @@
     --pagefind-ui-border-width: 1px;
 }
 
+
+@view-transition {
+    navigation: auto;
+}
+
+.header,
+.sidebar {
+    view-transition-name: none;
+}
 /* Light theme overrides when html[data-theme="light"] is set */
 html[data-theme="light"] {
     /* Scope B: medium-scope visual variables (light overrides) */
