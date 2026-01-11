@@ -12,9 +12,9 @@ keywords: 'iot dotnet docker'
 
 <!--more-->
 
-# Hello, World fra et IOT perspektiv!
+> Hello, World fra et IoT perspektiv!
 
-Hvordan sette opp en rasberry pi
+## Oppsett av Rasperry Pi 
 vise biler av deler og fremdrift
 
 ssh
@@ -23,6 +23,7 @@ enable under opprettelse av OS på minnekortet
 i2c
 enable i configfilen
 
+## Oppsett av utviklingsmiljø
 
 dev container
 dotnet new
@@ -43,8 +44,12 @@ deler
 Siden dev container er islert på min maskin kan ikke data overføres direkte til target, må derfor kopiere en self-contained versjon av programmet ut av containere og legge på disk til host maskinen. Dette gjøres fra WSL.
 docker cp iot-projects:/workspaces/dotnet/LedBlink/bin/Release/net8.0/linux-arm64/publish blink
 
-overfører alle filene over til en mappe på target
+```
+// Overfører alle filene over til en mappe på target
 scp -r ./* olehsm@pi3b.local:~/BlinkLed
+```
+
+
 
 
 logger meg så inn på target og kjører programmet

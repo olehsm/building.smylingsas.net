@@ -1,0 +1,38 @@
+{{ define "main" }}
+<div class="home-page">
+    <section class="hero">
+        <h1>Ole Halvor Smylingsås</h1>
+        <p>{{ .Params.subtitle }}</p>
+    </section>
+
+    <section class="about">
+        <h2>Om meg</h2>
+        <p>
+            Hei! Jeg er en utvikler som er lidenskapelig opptatt av teknologi, IoT og å bygge fantastiske nett-opplevelser.
+            Denne siden viser frem mine prosjekter, tanker og bokmerker fra nettet.
+        </p>
+    </section>
+
+    <section class="blog-preview">
+        <h2>Siste blogginnlegg</h2>
+        <div class="blog-list">
+            {{ range first 3 (where .Site.RegularPages "Type" "blog") }}
+            <div class="blog-item">
+                {{ if .Params.image }}
+                <img src="{{ .Params.image }}" alt="{{ .Title }}" />
+                {{ end }}
+                <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                <p>{{ .Summary | truncate 100 }}</p>
+            </div>
+            {{ end }}
+        </div>
+        <a href="/blog/">Se alle innlegg</a>
+    </section>
+
+    <section class="bookmarks">
+        <h2>Nylige bokmerker</h2>
+        <p>Sjekk ut noen interessante lenker jeg har lagret.</p>
+        <a href="/bookmarks/">Utforsk bokmerker</a>
+    </section>
+</div>
+{{ end }}
