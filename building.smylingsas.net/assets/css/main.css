@@ -24,6 +24,7 @@ a {
 
 main a {
     color: var(--secondary-color);
+    scrollbar-gutter: stable;
 }
 
 ol,

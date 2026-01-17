@@ -4,13 +4,32 @@
         {{ partial "head.html" . }}
     </head>
     <body>
-        <div class="app-layout">
+        <div class="app-layout {{ if eq .Kind "page" }}single{{ end }}">
             <header class="header">
                 {{ partial "header.html" . }} 
             </header>
             <nav class="sidebar">
                 {{ partial "nav.html" . }}
             </nav>
+            {{ if eq .Kind "page" }}
+            <aside class="articles">
+                {{ if eq .Type "blog" }}
+                <h3>Other Blog Posts</h3>
+                <ul>
+                    {{ range first 50 (where .Site.RegularPages "Type" "blog") }}
+                    <li {{ if eq .RelPermalink $.RelPermalink }}class="current"{{ end }}><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+                    {{ end }}
+                </ul>
+                {{ else if eq .Type "bookmarks" }}
+                <h3>Other Bookmarks</h3>
+                <ul>
+                    {{ range first 50 (where .Site.RegularPages "Type" "bookmarks") }}
+                    <li {{ if eq .RelPermalink $.RelPermalink }}class="current"{{ end }}><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+                    {{ end }}
+                </ul>
+                {{ end }}
+            </aside>
+            {{ end }}
             <main class="main">
                 {{- block "main" . -}}{{- end -}}
             </main>

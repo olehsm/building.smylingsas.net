@@ -8,6 +8,7 @@ import {
     wireThemeButtons,
     wireThemeToggle,
 } from "./modules/theme.js";
+import { initLayoutToggle } from "./modules/layout-toggle.js";
 
 // Initialize modules when DOM is ready
 function onReady() {
@@ -17,6 +18,7 @@ function onReady() {
     initNetwork();
     initBattery();
     initTheme();
+    initLayoutToggle();
     // Use a single tri-state theme toggle button when present
     wireThemeToggle();
 

@@ -8,6 +8,33 @@
     align-items: stretch;
 }
 
+.list-grid.list-view {
+    display: block;
+}
+
+.list-grid.list-view .list-grid-item {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 1rem;
+    padding: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    background: var(--card-bg);
+}
+
+.list-grid.list-view .visual {
+    width: 100px;
+    height: 100px;
+}
+
+.list-grid .list-grid-item {
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    background: var(--card-bg);
+    padding: 0.5rem;
+}
+
 .h1-list {
     font-size: clamp(2.25rem, 6vw, 3.875rem);
     line-height: clamp(2.5rem, 6.5vw, 4.25rem);
@@ -66,6 +93,22 @@
     color: var(--text-color);
 }
 
-.something a.active {
-    font-weight: bolder;
+.layout-toggle {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    justify-content: flex-end;
+}
+
+.layout-btn {
+    padding: 0.5rem 1rem;
+    background: var(--primary-color);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.layout-btn.active {
+    background: var(--secondary-color);
 }
