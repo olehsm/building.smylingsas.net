@@ -1,6 +1,4 @@
-baseURL: http://localhost:1313/
 languageCode: nb #ISO 639-1 Language Codes
-title: LOCAL building.smylingsas.net
 author: Ole Halvor Smylingsås
 enableRobotsTXT: true
 module:

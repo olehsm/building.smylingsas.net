@@ -1,0 +1,4 @@
+baseURL: https://smylingsas.net/
+title: Smylingsas.net
+build:
+  minify: true
