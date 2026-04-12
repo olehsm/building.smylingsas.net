@@ -5,7 +5,7 @@ draft: true
 pageresources: []
 tags: null
 author: Ole Halvor Smylingsås
-description: 'En liten tutorial som plutselig ble større. hello world med lyspære ble til dev container, kopire dockerfiler til remote host med ssh osv'
+description: 'En liten tutorial som plutselig ble større. hello world med lyspære ble til dev container, kopiere dockerfiler til remote host med ssh osv'
 image: RPI_Twitter_COLOUR.webp
 keywords: 'iot dotnet docker'
 ---
