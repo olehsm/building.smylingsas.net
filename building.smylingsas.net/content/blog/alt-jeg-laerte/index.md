@@ -1,9 +1,13 @@
 ---
-title: 'Alt jeg lærte da jeg satt opp Smylingsas.net opp på nytt i 2025'
+title: 'Alt jeg lærte da jeg satt opp Smylingsas.net opp på nytt.'
 date:  2026-01-01T18:47:42Z
 draft: true
 pageresources: []
-tags: null
+tags: 
+    - Hugo
+    - Containers
+    - Docker
+    - JS
 author: Ole Halvor Smylingsås
 description: null
 image: null
@@ -30,7 +34,7 @@ npx hugo-bin new site building.smylingsas.net lager en Hugo mappestruktur på ro
 
 Jeg entrer mappen ved  å kjøre følgende kommando og for å opprette en package,json-fil.
 
-```
+```bash
 cd building.smylingsas.net
 npm init -y
 Wrote to /workspaces/barebones-nodejs-3/building.smylingsas.net/package.json:
@@ -56,7 +60,7 @@ Ja jeg benyttet NPX til å opprette en ny site til å begynne med, men det vil v
 
 Hugo kommer i 2 versjoner; en vanlig og en extended. Jeg velger extended for å ha tilgang til Hugo sine mange funksjoner rundt bildebehandling. Extendedversjonen er også den anbefalte versjonen fra gjengen som står bak Hugo. Derfor legger jeg til følgende linje i min package.json. Det er meget viktig at dette gjøres før man installerer eller vil NPM alltid installere den vanlige versjonen uansett
 
-```
+```json
 "hugo-bin": {
   "buildTags": "extended"
 }
@@ -70,7 +74,7 @@ npm install hugo-bin -S
 
 Endrer så litt på script-seksjonen i package.json: 
 Hugo server bygger prosjektet og starter den innebygde webserveren med hot-reload
-```
+```json
 "scripts": {
   "start": "hugo server --buildDrafts --cleanDestinationDir",
   "hugo": "hugo",
@@ -81,7 +85,7 @@ Hugo server bygger prosjektet og starter den innebygde webserveren med hot-reloa
 For å sjekke hvilken versjon av hugo man kjører kan nå denne kommandoen eksekveres:
 npm run hugo version
 
-```
+```bash
 // Svaret blir noe i nærheten av (om alt er satt opp riktig): 
 hugo v0.136.2-ad985550a4faff6bc40ce4c88b11215a9330a74e+extended linux/amd64 BuildDate=2024-10-17T14:30:05Z VendorInfo=gohugoio
 ```
@@ -119,12 +123,12 @@ Innholdet skal etterhvert plasseres i mappa content, utformmingen av innholdet s
 
 Jeg starter med å lage en mappe under layouts:
 
-```
+```bash
 mkdir layouts/_default
 ```
 Et prosjekt i Hugo er bygget opp av ulike sidetyper: index, 404, single og list for å nevne noen. Hver av disse må ha en egen templatefil, vi oppretter de nå
 
-```
+```bash
 touch layouts/_default/baseof.html
 touch layouts/_default/single.html
 touch layouts/_default/list.html
@@ -132,7 +136,7 @@ touch layouts/_default/list.html
 
 baseof.html inneholder skjelettet til nettsiden. Både <html>,<head> og <body> - elementene kan plasseres i denne filen. De andre templatefilene bruker denne filen.
 
-```
+```html
 <!DOCTYPE html>
 <html lang="no">
     <head>
@@ -150,14 +154,14 @@ baseof.html inneholder skjelettet til nettsiden. Både <html>,<head> og <body> -
 
 Oppretter også en index.html-fil på roten av content-mappa. Dette er filen som blir vist når en besøker base-url eller localhost:1313 akkurat nå
 
-```
+```bash
 touch content/_index.html
 ```
 
 og legger inn følgende som innhold i filen
 
 ```
----
+---yaml
 title: 'Home'
 ---
 <h1>This is the home page</h1>
@@ -174,7 +178,7 @@ mv hugo.toml hugo.yaml
 
 Innholdet av hugo.yaml vil da se slik ut som dette:
 
-```
+```toml
 baseURL = 'https://example.org/'
 languageCode = 'en-us'
 title = 'My New Hugo Site'
@@ -189,7 +193,7 @@ Dette nå rettes opp i:
 
 Endrer innholdet til dette format:
 
-```
+```yaml
 baseURL: https://building.smylingsas.net/
 languageCode: nb #ISO 639-1 Language Codes
 title: building.smylingsas.net
@@ -223,7 +227,7 @@ navigere til containeren rotmappe og kjøre kommandoen git init:
 git init --initial-branch=main
 
 
- git remote set-url origin https://github.com/olehsm/building.smylingsas.net.git
+git remote set-url origin https://github.com/olehsm/building.smylingsas.net.git
 
 git remote add origin https://github.com/olehsm/iot-helloworld-blinkled.git
 
@@ -264,7 +268,7 @@ CopyEdit
 Hugo will just treat that as a string of text. It won’t actually look for the imported files or combine them — because Hugo doesn’t resolve @import dependencies in plain CSS.
 
 default image dersom man magler image i page.params
-```
+```go
 {{ with .Resources.GetMatch .Params.image }} 
     <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}">
 {{ else }}
