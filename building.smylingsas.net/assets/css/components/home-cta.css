@@ -1,0 +1,46 @@
+.home-cta {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    list-style-type: none;
+    padding:0;
+    margin: 0;
+}
+
+
+.home-cta-item {
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    background: #1c1b1b;;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: auto;
+    padding: 1rem;
+    justify-content: space-around;
+    height: 14rem;
+}
+
+
+.home-cta-item:hover h2, .home-cta-item:hover .logo {
+    color: white;
+}
+
+
+.home-cta-item:hover {
+    border: 1px solid var(--primary-color);
+}
+
+
+.home-cta-item h2 {
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    line-height: clamp(2rem, 5vw, 3rem);
+    letter-spacing: clamp(-0.5px, -0.5vw, -1px);
+    margin: 0;
+    color: var(--primary-color);
+}
+
+
+.home-cta-item .logo {
+    color: var(--primary-color);
+}

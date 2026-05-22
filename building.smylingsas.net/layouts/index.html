@@ -1,38 +1,91 @@
 {{ define "main" }}
-<div class="home-page">
-    <section class="hero">
-        <h1>Ole Halvor Smylingsås</h1>
-        <p>{{ .Params.subtitle }}</p>
-    </section>
+    <div class="container">
+        <div class="layout layout--home">
+            <section class="title hero">
+                    <h1 class="h1-list">
+                        {{.Title}}
+                    </h1>
+                    <p class="list-subtitle">{{.Params.subtitle}}</p>
+            </section>
+            <section class="cards">
+                    <ul class="home-cta">
+                        <li>
+                            <a href="/blog/">
+                                <article class="home-cta-item">
+                                    <div class="logo">
+                                        {{ partial "icons/blog.svg.html" . }}
+                                    </div>
+                                    <h2>Blogg</h2>
+                                </article> 
+                            </a>
+                        </li>    
+                        <li>
+                            <a href="/bookmarks/">   
+                                <article class="home-cta-item">
+                                    <div class="logo">
+                                        {{ partial "icons/bookmarks.svg.html" . }}
+                                    </div>
+                                    <h2>Bokmerker</h2>
+                                </article>
+                            </a>    
+                        </li>
+                        <li> 
+                            <a href="/projects/">
+                                <article class="home-cta-item">
+                                    <div class="logo">
+                                        {{ partial "icons/projects.svg.html" . }}
+                                    </div>
+                                    <h2>Prosjekter</h2>
+                                </article>
+                            </a>    
+                        </li>
+                        <li>
+                            <a href="/archive/">      
+                                <article class="home-cta-item">
+                                    <div class="logo">
+                                        {{ partial "icons/projects.svg.html" . }}
+                                    </div>
+                                    <h2>Arkiv</h2>
+                                </article>
+                            </a>    
+                        </li>
+                    </ul>
 
-    <section class="about">
-        <h2>Om meg</h2>
-        <p>
-            Hei! Jeg er en utvikler som er lidenskapelig opptatt av teknologi, IoT og å bygge fantastiske nett-opplevelser.
-            Denne siden viser frem mine prosjekter, tanker og bokmerker fra nettet.
-        </p>
-    </section>
-
-    <section class="blog-preview">
-        <h2>Siste blogginnlegg</h2>
-        <div class="blog-list">
-            {{ range first 3 (where .Site.RegularPages "Type" "blog") }}
-            <div class="blog-item">
-                {{ if .Params.image }}
-                <img src="{{ .Params.image }}" alt="{{ .Title }}" />
-                {{ end }}
-                <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-                <p>{{ .Summary | truncate 100 }}</p>
-            </div>
-            {{ end }}
+            </section>
+            <section class="latest-posts">
+                <h2>Nyeste bloggposter</h2>
+                <ul class="">
+                    {{ range first 5 (where .Site.RegularPages "Type" "blog") }}
+                        <li>
+                            <a href="{{ .RelPermalink }}">
+                                {{ .Title }}
+                            </a>
+                        </li>
+                    {{ end }}
+                </ul>
+            </section>
+            <section class="latest-bookmarks">
+                <h2>Nyeste bokmerker</h2>
+                <ul class="">
+                    {{ range first 5 (where .Site.RegularPages "Type" "bookmarks") }}
+                        <li>
+                            <a href="{{ .RelPermalink }}">
+                                {{ .Title }}
+                            </a>
+                        </li>
+                    {{ end }}
+                </ul>
+            </section>
+            <section class="tag-cloud">
+                <h2>Emner</h2>
+                <ul class="tag-list">
+                    {{ range .Site.Taxonomies.tags }}
+                        <li>
+                            <a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a>
+                        </li>
+                    {{ end }}
+                </ul>
+            </section>
         </div>
-        <a href="/blog/">Se alle innlegg</a>
-    </section>
-
-    <section class="bookmarks">
-        <h2>Nylige bokmerker</h2>
-        <p>Sjekk ut noen interessante lenker jeg har lagret.</p>
-        <a href="/bookmarks/">Utforsk bokmerker</a>
-    </section>
-</div>
+    </div>
 {{ end }}

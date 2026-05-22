@@ -2,6 +2,7 @@ html {
     font-size: 100%;
 }
 
+
 body {
     font-family: var(--font-family);
     color: var(--text-color);
@@ -9,29 +10,40 @@ body {
     font-size: var(--font-base);
 }
 
+
 h1 {
     font-size: var(--font-3xl);
     font-size: clamp(2rem, 4vw, 3.5rem);
 }
 
+
 p {
     font-size: var(--font-sm);
 }
+
 
 a {
     text-decoration: none;
 }
 
+
 main a {
     color: var(--secondary-color);
-    scrollbar-gutter: stable;
 }
+
+
+main a:hover {
+    text-decoration: underline;
+    color: var(--secondary-color);
+}
+
 
 ol,
 li {
     margin: 0;
     padding: 0;
 }
+
 
 .page-wrapper {
     display: grid;
@@ -44,6 +56,7 @@ li {
     line-height: 1.8;
 }
 
+
 .error-page {
     display: flex;
     flex-direction: column;
@@ -55,15 +68,18 @@ li {
     text-align: center;
 }
 
+
 .error-main h1,
 .error-main p,
 .error-main blockquote {
     margin: 0.5rem 0;
 }
 
+
 .page-wrapper > * {
     grid-column: 2;
 }
+
 
 .svg-calendar {
     width: 20px;
@@ -72,9 +88,11 @@ li {
     transition: color 0.3s ease;
 }
 
+
 .svg-calendar path {
     fill: none;
 }
+
 
 dialog {
     border: none;
@@ -86,9 +104,11 @@ dialog {
     box-shadow: 0 0 10px var(--shadow-default);
 }
 
+
 dialog::backdrop {
     background: var(--backdrop-bg);
 }
+
 
 .modal-content {
     padding: 2rem;
@@ -96,6 +116,7 @@ dialog::backdrop {
     flex-direction: column;
     gap: 1rem;
 }
+
 
 /* Landing Page Styles */
 .home-page {
@@ -107,30 +128,35 @@ dialog::backdrop {
     gap: 3rem;
 }
 
+
 .home-page p {
     font-size: clamp(1rem, 2vw, 1.4rem);
     line-height: 1.7;
 }
 
+
 .hero {
-    text-align: center;
+    text-align: left;
     padding: 2rem 0;
 }
 
+
 .hero h1 {
     font-size: 3rem;
-    margin-bottom: 0.5rem;
     color: var(--primary-color);
 }
+
 
 .hero p {
     font-size: 1.2rem;
     color: var(--text-color);
 }
 
+
 .about, .blog-preview, .bookmarks {
     padding: 1.5rem 0;
 }
+
 
 .about h2, .blog-preview h2, .bookmarks h2 {
     font-size: 2rem;
@@ -138,20 +164,24 @@ dialog::backdrop {
     color: var(--secondary-color);
 }
 
+
 .about p {
     line-height: 1.6;
 }
+
 
 .blog-preview ul {
     list-style: none;
     padding: 0;
 }
 
+
 .blog-list {
     display: flex;
     gap: 1rem;
     flex-wrap: wrap;
 }
+
 
 .blog-item {
     flex: 1;
@@ -165,6 +195,7 @@ dialog::backdrop {
     gap: 0.5rem;
 }
 
+
 .blog-item img {
     width: 100%;
     height: auto;
@@ -172,18 +203,22 @@ dialog::backdrop {
     margin-bottom: 0.5rem;
 }
 
+
 .blog-preview li a {
     color: var(--link-color);
 }
+
 
 .blog-preview li p {
     margin: 0.5rem 0 0 0;
     color: var(--text-color);
 }
 
+
 .bookmarks p {
     margin-bottom: 1rem;
 }
+
 
 .bookmarks a, .blog-preview a[href="/blog/"] {
     display: inline-block;
@@ -195,9 +230,11 @@ dialog::backdrop {
     transition: background 0.3s ease;
 }
 
+
 .bookmarks a:hover, .blog-preview a[href="/blog/"]:hover {
     background: var(--secondary-color);
 }
+
 
 /* Article Page Styles */
 .article-content {
@@ -205,6 +242,7 @@ dialog::backdrop {
     line-height: 1.7;
     color: var(--text-color);
 }
+
 
 .article-content h1,
 .article-content h2,
@@ -218,6 +256,7 @@ dialog::backdrop {
     font-weight: 600;
 }
 
+
 .article-content h1 { font-size: clamp(2rem, 6vw, 6rem); }
 .article-content h2 { font-size: clamp(1.75rem, 4vw, 2.5rem); }
 .article-content h3 { font-size: clamp(1.5rem, 3vw, 2rem); }
@@ -225,10 +264,12 @@ dialog::backdrop {
 .article-content h5 { font-size: clamp(1.1rem, 2vw, 1.5rem); }
 .article-content h6 { font-size: clamp(1rem, 1.5vw, 1.25rem); }
 
+
 .article-content p {
     margin-bottom: 1.5rem;
     font-size: clamp(1rem, 2vw, 1.4rem);
 }
+
 
 .article-content img {
     max-width: 100%;
@@ -237,6 +278,7 @@ dialog::backdrop {
     margin: 1rem 0;
 }
 
+
 /* Hero image in articles */
 .article-image img {
     border-radius: 12px;
@@ -244,11 +286,14 @@ dialog::backdrop {
     height: auto;
 }
 
+
 /* Article title */
 .title.hero h1 {
     font-size: clamp(2rem, 6vw, 6rem);
-    line-height: 1
+    line-height: 1;
+    margin-bottom:2rem;
 }
+
 
 .article-content code {
     background: var(--primary-color);
@@ -259,6 +304,7 @@ dialog::backdrop {
     font-size: 0.9em;
 }
 
+
 .article-content pre {
     background: var(--primary-color);
     color: var(--text-color);
@@ -268,6 +314,7 @@ dialog::backdrop {
     margin: 1.5rem 0;
 }
 
+
 .article-content pre code {
     background: none;
     color: inherit;
@@ -275,15 +322,18 @@ dialog::backdrop {
     border-radius: 0;
 }
 
+
 .article-content ul,
 .article-content ol {
     margin: 1.5rem 0;
     padding-left: 2rem;
 }
 
+
 .article-content li {
     margin-bottom: 0.5rem;
 }
+
 
 .article-content table {
     width: 100%;
@@ -293,6 +343,7 @@ dialog::backdrop {
     display: block;
 }
 
+
 .article-content th,
 .article-content td {
     border: 1px solid var(--border-color);
@@ -300,10 +351,12 @@ dialog::backdrop {
     text-align: left;
 }
 
+
 .article-content th {
     background: var(--primary-color);
     color: var(--text-color);
 }
+
 
 .article-content blockquote {
     border-left: 4px solid var(--secondary-color);
@@ -315,9 +368,13 @@ dialog::backdrop {
     border-radius: 4px;
     font-size: 1.2rem;
 }
+
+
 .article-content blockquote p {
     margin: 0;
 }
+
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .title.hero h1 { 
