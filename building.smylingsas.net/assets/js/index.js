@@ -3,11 +3,7 @@ import { initModals, addModalOpenListener } from "./modules/modals.js";
 import { initSearch } from "./modules/search.js";
 import { initNetwork, updateNetworkInfo } from "./modules/network.js";
 import { initBattery, updateBatteryInfo } from "./modules/battery.js";
-import {
-    initTheme,
-    wireThemeButtons,
-    wireThemeToggle,
-} from "./modules/theme.js";
+import { initTheme, wireThemeToggle } from "./modules/theme.js";
 import { initLayoutToggle } from "./modules/layout-toggle.js";
 
 // Initialize modules when DOM is ready
