@@ -16,5 +16,6 @@
             ]
         }
     },
-    "workspaceFolder": "building.smylingsas.net"
+    "workspaceFolder": "building.smylingsas.net",
+    "postCreateCommand": "cd building.smylingsas.net && npm install"
 }
