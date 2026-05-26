@@ -49,11 +49,16 @@ li {
     display: grid;
     grid-template-columns:
         1fr
-        min(65ch, calc(100% - 30px- var(--sidebar-width)))
+        calc(100% - 30px - var(--sidebar-width))
         1fr;
     grid-column-gap: 15px;
     font-size: 2rem;
     line-height: 1.8;
+}
+
+.page-wrapper > * {
+    grid-column: 2;
+    max-width: 65ch;
 }
 
 
@@ -76,11 +81,6 @@ li {
 }
 
 
-.page-wrapper > * {
-    grid-column: 2;
-}
-
-
 .svg-calendar {
     width: 20px;
     height: 20px;
@@ -99,7 +99,7 @@ dialog {
     border-radius: 6px;
     background-color: var(--primary-color);
     color: var(--text-color);
-    width: min(90vw, 500px);
+    width: clamp(300px, 90vw, 500px);
     padding: 0;
     box-shadow: 0 0 10px var(--shadow-default);
 }
