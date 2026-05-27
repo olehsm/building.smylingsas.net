@@ -1,10 +1,10 @@
-import { initLazyImages } from "./modules/lazy-images.js";
-import { initModals, addModalOpenListener } from "./modules/modals.js";
-import { initSearch } from "./modules/search.js";
-import { initNetwork, updateNetworkInfo } from "./modules/network.js";
-import { initBattery, updateBatteryInfo } from "./modules/battery.js";
-import { initTheme, wireThemeToggle } from "./modules/theme.js";
-import { initLayoutToggle } from "./modules/layout-toggle.js";
+import { initLazyImages } from "./modules/lazy-images.ts";
+import { initModals, addModalOpenListener } from "./modules/modals.ts";
+import { initSearch } from "./modules/search.ts";
+import { initNetwork, updateNetworkInfo } from "./modules/network.ts";
+import { initBattery, updateBatteryInfo } from "./modules/battery.ts";
+import { initTheme, wireThemeToggle } from "./modules/theme.ts";
+import { initLayoutToggle } from "./modules/layout-toggle.ts";
 
 function onReady(): void {
     initLazyImages();

@@ -1,4 +1,4 @@
-import { formatSeconds } from "./utils.js";
+import { formatSeconds } from "./utils.ts";
 
 interface BatteryManager extends EventTarget {
     charging: boolean;
