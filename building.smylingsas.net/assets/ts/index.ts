@@ -5,7 +5,8 @@ import { initNetwork, updateNetworkInfo } from "./modules/network.js";
 import { initBattery, updateBatteryInfo } from "./modules/battery.js";
 import { initTheme, wireThemeToggle } from "./modules/theme.js";
 import { initLayoutToggle } from "./modules/layout-toggle.js";
-function onReady() {
+
+function onReady(): void {
     initLazyImages();
     initModals();
     initSearch();
@@ -14,7 +15,8 @@ function onReady() {
     initTheme();
     initLayoutToggle();
     wireThemeToggle();
-    addModalOpenListener((modalId) => {
+
+    addModalOpenListener((modalId: string): void => {
         if (modalId === "networkInfoModal") {
             updateNetworkInfo();
         }
@@ -23,10 +25,9 @@ function onReady() {
         }
     });
 }
+
 if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", onReady);
-}
-else {
+} else {
     onReady();
 }
-//# sourceMappingURL=index.js.map

@@ -3,10 +3,12 @@ export function initLazyImages() {
     images.forEach((img) => {
         if (img.complete) {
             img.style.filter = "none";
-        } else {
+        }
+        else {
             img.addEventListener("load", () => {
                 img.style.filter = "none";
             });
         }
     });
 }
+//# sourceMappingURL=lazy-images.js.map

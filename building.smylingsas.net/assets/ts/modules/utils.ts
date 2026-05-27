@@ -1,8 +1,6 @@
-export function formatSeconds(seconds) {
-    if (seconds === undefined || seconds === null)
-        return "Ikke tilgjengelig";
-    if (!isFinite(seconds))
-        return "Ingen estimert tid";
+export function formatSeconds(seconds: number | undefined | null): string {
+    if (seconds === undefined || seconds === null) return "Ikke tilgjengelig";
+    if (!isFinite(seconds)) return "Ingen estimert tid";
     const sec = Math.round(seconds);
     const hours = Math.floor(sec / 3600);
     const minutes = Math.floor((sec % 3600) / 60);
@@ -15,9 +13,8 @@ export function formatSeconds(seconds) {
     }
     return `${remainder} s`;
 }
-export function safeText(node, text) {
-    if (!node)
-        return;
+
+export function safeText(node: HTMLElement | null, text: string): void {
+    if (!node) return;
     node.innerText = text;
 }
-//# sourceMappingURL=utils.js.map

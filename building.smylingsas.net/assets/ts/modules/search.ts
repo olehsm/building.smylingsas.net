@@ -1,37 +1,38 @@
-export function initSearch() {
-    const input = document.getElementById("searchInput");
-    const dialog = document.getElementById("searchDialog");
+export function initSearch(): void {
+    const input = document.getElementById("searchInput") as HTMLInputElement | null;
+    const dialog = document.getElementById("searchDialog") as HTMLDialogElement | null;
+
     if (!input || !dialog) {
         return;
     }
-    function findPagefindInput() {
+
+    function findPagefindInput(): HTMLInputElement | null {
         const container = document.getElementById("search");
-        if (!container)
-            return null;
-        return container.querySelector('input[type="search"], input');
+        if (!container) return null;
+        return container.querySelector<HTMLInputElement>('input[type="search"], input');
     }
-    function setPagefindValue(value) {
+
+    function setPagefindValue(value: string): boolean {
         const pfInput = findPagefindInput();
-        if (!pfInput)
-            return false;
+        if (!pfInput) return false;
         pfInput.value = value;
         pfInput.dispatchEvent(new Event("input", { bubbles: true }));
         return true;
     }
-    input.addEventListener("input", () => {
+
+    input.addEventListener("input", (): void => {
         const val = input.value || "";
-        if (val.trim() === "")
-            return;
+        if (val.trim() === "") return;
+
         if (!dialog.open) {
             dialog.showModal();
             let attempts = 0;
-            const tryPopulate = () => {
+            const tryPopulate = (): void => {
                 attempts += 1;
                 const ok = setPagefindValue(val);
                 if (ok) {
                     const pf = findPagefindInput();
-                    if (pf)
-                        pf.focus();
+                    if (pf) pf.focus();
                     return;
                 }
                 if (attempts < 10) {
@@ -39,10 +40,8 @@ export function initSearch() {
                 }
             };
             setTimeout(tryPopulate, 50);
-        }
-        else {
+        } else {
             setPagefindValue(val);
         }
     });
 }
-//# sourceMappingURL=search.js.map

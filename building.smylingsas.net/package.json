@@ -10,10 +10,12 @@
         "buildTags": "extended"
     },
     "scripts": {
-        "start": "hugo server --environment development --disableFastRender --ignoreCache --noHTTPCache --buildDrafts --cleanDestinationDir",
+        "start": "npm run build:ts:watch & hugo server --environment development --disableFastRender --ignoreCache --noHTTPCache --buildDrafts --cleanDestinationDir",
         "hugo": "hugo",
-        "build:dev": "hugo --environment development",
-        "build:prod": "hugo --environment production --minify && pagefind --site public",
+        "build:ts": "tsc",
+        "build:ts:watch": "tsc --watch",
+        "build:dev": "npm run build:ts && hugo --environment development",
+        "build:prod": "npm run build:ts && hugo --environment production --minify && pagefind --site public",
         "pagefind": "pagefind --site public --output-subdir ../static/pagefind"
     },
     "dependencies": {
@@ -21,6 +23,9 @@
         "pagefind": "^1.4.0"
     },
     "devDependencies": {
-        "prettier": "^3.7.3"
+        "@types/node": "^25.9.1",
+        "esbuild": "^0.28.0",
+        "prettier": "^3.7.3",
+        "typescript": "^6.0.3"
     }
 }
