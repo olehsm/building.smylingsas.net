@@ -55,10 +55,7 @@ export function initBattery(): void {
             battery.addEventListener("chargingchange", updateChargeInfo);
             battery.addEventListener("levelchange", updateLevelInfo);
             battery.addEventListener("chargingtimechange", updateChargingInfo);
-            battery.addEventListener(
-                "dischargingtimechange",
-                updateDischargingInfo,
-            );
+            battery.addEventListener("dischargingtimechange",updateDischargingInfo);
             updateAll();
         })
         .catch((e: Error): void => {

@@ -22,12 +22,14 @@ export function initModals(): void {
         });
     });
 
+
     document.querySelectorAll<HTMLElement>("dialog .close-modal").forEach((btn: HTMLElement): void => {
         btn.addEventListener("click", (): void => {
             const modal = btn.closest("dialog") as HTMLDialogElement | null;
             modal?.close();
         });
     });
+
 
     document.querySelectorAll<HTMLDialogElement>("dialog").forEach((modal: HTMLDialogElement): void => {
         modal.addEventListener("click", (e: MouseEvent): void => {
@@ -43,6 +45,7 @@ export function initModals(): void {
         });
     });
 }
+
 
 export function addModalOpenListener(fn: ModalOpenListener): void {
     if (typeof fn === "function") openListeners.push(fn);
