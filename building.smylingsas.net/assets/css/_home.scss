@@ -47,7 +47,7 @@
 
 .latest-posts a,
 .latest-bookmarks a {
-    color: white;
+    color: var(--text-color);
 }
 
 
@@ -77,15 +77,15 @@
     padding: 1em;
     text-align: center;
     background-color: var(--secondary-color);
-    color: white;
+    color: var(--text-color);
     text-transform: capitalize;
-    border-radius: 4px;
+    border-radius: var(--default-border-radius);
     border: 2px solid #161616;
 }
 
 
 .tag-list a:hover {
     border: 2px solid  var(--primary-color); 
-    color: white;
+    color: var(--text-color);
     text-decoration: none;
 }

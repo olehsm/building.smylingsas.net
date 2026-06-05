@@ -10,8 +10,8 @@
 
 .home-cta-item {
     border: 1px solid var(--border-color);
-    border-radius: 4px;
-    background: #1c1b1b;;
+    border-radius: var(--default-border-radius);
+    background: var(--box-background);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -23,7 +23,7 @@
 
 
 .home-cta-item:hover h2, .home-cta-item:hover .logo {
-    color: white;
+    color: var(--text-color);
 }
 
 
