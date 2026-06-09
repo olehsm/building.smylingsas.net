@@ -6,9 +6,18 @@
                     {{.Title}}
                 </h1>
                 <p class="list-subtitle">{{.Params.subtitle}}</p>
+            </div>
+        </section>
+
+        <section class="">
+            <div class="container">
                 <div class="layout-toggle">
-                    <button id="grid-view-btn" class="layout-btn active">Grid View</button>
-                    <button id="list-view-btn" class="layout-btn">List View</button>
+                    <button id="grid-view-btn" class="layout-button active">
+                        {{ partial "icons/grid.svg.html" . }}
+                    </button>
+                    <button id="list-view-btn" class="layout-button">
+                        {{ partial "icons/list.svg.html" . }}
+                    </button>
                 </div>
             </div>
         </section>

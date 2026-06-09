@@ -12,7 +12,7 @@
 
 
 .header-nav-button,
-.layout-btn{
+.layout-button{
     background: none;
     border: none;
     padding: 0.5rem;
@@ -22,7 +22,7 @@
     text-decoration: none;
 }
 
-.layout-btn {
+.layout-button {
     padding: 0.5rem 1rem;
     background: var(--primary-color);
     color: var(--text-color);
@@ -32,7 +32,7 @@
 }
 
 
-.layout-btn.active {
+.layout-button.active {
     background: var(--secondary-color);
 }
 
