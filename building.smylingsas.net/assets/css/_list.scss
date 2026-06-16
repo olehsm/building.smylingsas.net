@@ -86,7 +86,7 @@
 .layout--list {
     display: grid;
     grid-template-rows: auto 1fr auto;
-    min-height: calc(100dvh - 67px);
+    min-block-size: calc(100dvh - 67px);
     row-gap: clamp(3rem, 5vw, 6rem);
 }
 

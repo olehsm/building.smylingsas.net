@@ -1,7 +1,7 @@
 .layout--home {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    min-height: 100dvh;
+    min-block-size: 100dvh;
     row-gap: clamp(1.5rem, 5vw, 3rem); 
     column-gap: 3rem;
     padding-bottom: clamp(4rem, 10vh, 8rem);
