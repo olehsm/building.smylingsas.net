@@ -155,8 +155,8 @@ dialog::backdrop {
 
 
 .article-content img {
-    max-width: 100%;
-    height: auto;
+    max-inline-size: 100%;
+    block-size: auto;
     border-radius: var(--default-border-radius);
     margin: 1rem 0;
 }
@@ -165,8 +165,8 @@ dialog::backdrop {
 /* Hero image in articles */
 .article-image img {
     border-radius: var(--default-border-radius);
-    width: 100%;
-    height: auto;
+    inline-size: 100%;
+    block-size: auto;
 }
 
 
