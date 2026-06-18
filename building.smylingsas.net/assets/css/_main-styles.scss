@@ -133,8 +133,8 @@ dialog::backdrop {
 .article-content h4,
 .article-content h5,
 .article-content h6 {
-    margin-top: 2rem;
-    margin-bottom: 1rem;
+    margin-block-start: 2rem;
+    margin-block-end: 1rem;
     color: var(--primary-color);
     font-weight: 600;
 }
@@ -149,7 +149,7 @@ dialog::backdrop {
 
 
 .article-content p {
-    margin-bottom: 1.5rem;
+    margin-block-end: 1.5rem;
     font-size: clamp(1rem, 2vw, 1.4rem);
 }
 
@@ -208,8 +208,8 @@ dialog::backdrop {
 
 .article-content ul,
 .article-content ol {
-    margin: 1.5rem 0;
-    padding-left: 2rem;
+    margin-block: 1.5rem;
+    padding-inline-start: 2rem;
 }
 
 

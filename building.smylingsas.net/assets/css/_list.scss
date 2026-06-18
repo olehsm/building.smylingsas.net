@@ -21,7 +21,7 @@
     padding: 1rem;
     border: 1px solid var(--border-color);
     border-radius: var(--default-border-radius);
-    margin-bottom: 1rem;
+    margin-block-end: 1rem;
     background: var(--card-bg);
 }
 
@@ -92,12 +92,12 @@
 
 
 .title.hero {
-    padding-top: clamp(4rem, 10vh, 8rem);
+    padding-block-start: clamp(4rem, 10vh, 8rem);
 }
 
 
 .pagination {
-    margin-bottom: clamp(1.5rem, 3vh, 3rem);
+    margin-block-end: clamp(1.5rem, 3vh, 3rem);
 }
 
 
@@ -109,6 +109,6 @@
 .layout-toggle {
     display: flex;
     gap: 0.5rem;
-    margin-top: 1rem;
+    margin-block-start: 1rem;
     justify-content: flex-end;
 }
