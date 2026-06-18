@@ -6,6 +6,12 @@
     transition: background-color 0.2s ease;
 }
 
+@media (prefers-reduced-motion: reduce) {
+    .list-grid-item {
+        transition: none;
+    }
+}
+
 .visual {
     aspect-ratio: 16 / 9;
     overflow: hidden;
@@ -20,6 +26,12 @@
     display: block;
     filter: grayscale(100%) contrast(120%) brightness(0.9) sepia(10%);
     transition: filter 0.3s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .visual img {
+        transition: none;
+    }
 }
 
 .item__link:hover .visual img {
@@ -40,6 +52,12 @@
     background-position: center;
     filter: blur(20px);
     transition: filter 0.4s ease-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .lazy-image {
+        transition: none;
+    }
 }
 
 .item__body {

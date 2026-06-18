@@ -5,6 +5,12 @@
     transition: color 0.3s ease;
 }
 
+@media (prefers-reduced-motion: reduce) {
+    .header-nav-logo {
+        transition: none;
+    }
+}
+
 
 .header-nav-logo path {
     fill: none;

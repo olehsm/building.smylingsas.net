@@ -23,6 +23,12 @@
         cursor: pointer;
     }
 
+@media (prefers-reduced-motion: reduce) {
+    .site-nav-item {
+        transition: none;
+    }
+}
+
     .site-nav-item:hover {
     background-color: var(--hover-bg);
     border-left: 5px solid var(--secondary-color);

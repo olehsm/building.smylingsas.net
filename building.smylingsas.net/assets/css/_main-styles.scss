@@ -71,6 +71,11 @@ li {
     transition: color 0.3s ease;
 }
 
+@media (prefers-reduced-motion: reduce) {
+    .svg-calendar {
+        transition: none;
+    }
+}
 
 .svg-calendar path {
     fill: none;
