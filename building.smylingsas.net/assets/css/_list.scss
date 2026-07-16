@@ -6,36 +6,32 @@
     padding: 0;
     margin: 0;
     align-items: stretch;
-}
 
+    .list-grid-item {
+        border: 1px solid var(--border-color);
+        border-radius: var(--default-border-radius);
+        background: var(--card-bg);
+    }
 
-.list-grid.list-view {
-    display: block;
-}
+    &.list-view {
+        display: block;
 
+        .list-grid-item {
+            display: grid;
+            grid-template-columns: 100px 1fr;
+            gap: 1rem;
+            padding: 1rem;
+            border: 1px solid var(--border-color);
+            border-radius: var(--default-border-radius);
+            margin-block-end: 1rem;
+            background: var(--card-bg);
+        }
 
-.list-grid.list-view .list-grid-item {
-    display: grid;
-    grid-template-columns: 100px 1fr;
-    gap: 1rem;
-    padding: 1rem;
-    border: 1px solid var(--border-color);
-    border-radius: var(--default-border-radius);
-    margin-block-end: 1rem;
-    background: var(--card-bg);
-}
-
-
-.list-grid.list-view .visual {
-    width: 100px;
-    height: 100px;
-}
-
-
-.list-grid .list-grid-item {
-    border: 1px solid var(--border-color);
-    border-radius: var(--default-border-radius);
-    background: var(--card-bg);
+        .visual {
+            width: 100px;
+            height: 100px;
+        }
+    }
 }
 
 
@@ -62,24 +58,21 @@
     padding: 0.5em;
     border-radius: var(--default-border-radius);
     gap: 10px;
+
+    a {
+        color: var(--text-color);
+    }
 }
 
 
 .layout--article {
     padding-block: clamp(3rem, 6vw, 6rem);
-}
 
-
-.layout--list .container {
-    padding-inline: clamp(1rem, 2.5vw, 4rem);
-    margin-inline: auto;
-}
-
-
-.layout--article .container {
-    max-width: 1000px;
-    padding-inline: clamp(1rem, 2.5vw, 4rem);
-    margin-inline: auto;
+    .container {
+        max-width: 1000px;
+        padding-inline: clamp(1rem, 2.5vw, 4rem);
+        margin-inline: auto;
+    }
 }
 
 
@@ -88,6 +81,11 @@
     grid-template-rows: auto 1fr auto;
     min-block-size: calc(100dvh - 67px);
     row-gap: clamp(3rem, 5vw, 6rem);
+
+    .container {
+        padding-inline: clamp(1rem, 2.5vw, 4rem);
+        margin-inline: auto;
+    }
 }
 
 
@@ -98,11 +96,6 @@
 
 .pagination {
     margin-block-end: clamp(1.5rem, 3vh, 3rem);
-}
-
-
-.something a {
-    color: var(--text-color);
 }
 
 

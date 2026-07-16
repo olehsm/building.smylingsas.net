@@ -3,7 +3,12 @@
     height: 20px;
     color: var(--text-color);
     transition: color 0.3s ease;
+
+    path {
+        fill: none;
+    }
 }
+
 
 @media (prefers-reduced-motion: reduce) {
     .header-nav-logo {
@@ -12,13 +17,8 @@
 }
 
 
-.header-nav-logo path {
-    fill: none;
-}
-
-
 .header-nav-button,
-.layout-button{
+.layout-button {
     background: none;
     border: none;
     padding: 0.5rem;
@@ -27,6 +27,7 @@
     align-items: center;
     text-decoration: none;
 }
+
 
 .layout-button {
     padding: 0.5rem 1rem;
