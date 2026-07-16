@@ -36,6 +36,10 @@
     border: 1px solid var(--border-color);
     border-radius: var(--default-border-radius);
     cursor: pointer;
+
+    path {
+        fill: unset;
+    }
 }
 
 
