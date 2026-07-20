@@ -7,25 +7,8 @@
     margin: 0;
     align-items: stretch;
 
-    .list-grid-item {
-        border: 1px solid var(--border-color);
-        border-radius: var(--default-border-radius);
-        background: var(--card-bg);
-    }
-
     &.list-view {
         display: block;
-
-        .list-grid-item {
-            display: grid;
-            grid-template-columns: 100px 1fr;
-            gap: 1rem;
-            padding: 1rem;
-            border: 1px solid var(--border-color);
-            border-radius: var(--default-border-radius);
-            margin-block-end: 1rem;
-            background: var(--card-bg);
-        }
 
         .visual {
             width: 100px;
