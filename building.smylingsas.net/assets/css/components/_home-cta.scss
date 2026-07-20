@@ -39,5 +39,15 @@
 
     .logo {
         color: var(--primary-color);
+        inline-size: 3rem;
+        block-size: 3rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        svg {
+            inline-size: 100%;
+            block-size: 100%;
+        }
     }
 }
