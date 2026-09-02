@@ -34,6 +34,13 @@
         grid-column: 2 / 3;
         grid-row: 3 / span 2;
     }
+
+    
+    a:hover {
+        color: inherit;
+        text-decoration: underline;
+        text-decoration-color: var(--secondary-color);
+    }
 }
 
 
