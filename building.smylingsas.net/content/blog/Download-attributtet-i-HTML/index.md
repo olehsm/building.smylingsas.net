@@ -7,7 +7,7 @@ tags:
   - html
 author: Ole Halvor Smylingsås
 description: null
-image: null
+image: category-html.png
 ---
 
 TIL:  Om en legger til 'download' attributett i en lenke... 
