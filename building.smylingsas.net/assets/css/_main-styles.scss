@@ -27,18 +27,6 @@ a {
 }
 
 
-main {
-    a {
-        color: var(--secondary-color);
-    }
-
-    a:hover {
-        text-decoration: underline;
-        color: var(--secondary-color);
-    }
-}
-
-
 ol,
 li {
     margin: 0;
@@ -230,6 +218,16 @@ dialog::backdrop {
         p {
             margin: 0;
         }
+    }
+
+
+    a {
+        color: var(--secondary-color);
+    }
+
+    a:hover {
+        text-decoration: underline;
+        color: var(--secondary-color);
     }
 }
 
