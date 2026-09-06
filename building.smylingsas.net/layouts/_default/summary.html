@@ -7,6 +7,9 @@
             <div class="item__body">
                 <h2 class="item__title">{{ .Title }}</h2>
                 {{.Summary}}
+                <time datetime="{{ .Date.Format "Mon, Jan 2, 2006" }}">
+                    {{ .Date.Format "Jan 2, 2006" }}
+                </time> 
             </div>
         </article>
     </a>

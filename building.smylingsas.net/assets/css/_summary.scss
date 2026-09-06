@@ -82,9 +82,21 @@
     background-color: var(--box-background);
     color: var(--text-color);
     border-radius: 0 0 4px 4px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.3em;
 }
 
 .item__title {
     font-size: 1.2rem;
     line-height: 1.1;
 }
+
+.item__body time {
+    margin-top: auto;
+    padding-top: 0.5em;
+    opacity: 0.5;
+}
+
+
+
