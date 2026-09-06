@@ -7,7 +7,7 @@ tags:
   - misc
 author: Ole Halvor Smylingsås
 description: null
-image: null
+image: visual-studio-icon.png
 ---
 ett opp anbefalte extensions for et prosjekt i Visual Studio Code
 <!--more-->

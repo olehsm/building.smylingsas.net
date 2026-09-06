@@ -7,7 +7,7 @@ tags:
   - misc
 author: Ole Halvor Smylingsås
 description: null
-image: null
+image: pool.jpg
 ---
 
 En Application pool er en mekanisme i IIS for å isolere webapplikasjoner fra hverandra. 

@@ -10,7 +10,7 @@ tags:
     - JS
 author: Ole Halvor Smylingsås
 description: null
-image: null
+image: 320hugo_logo.png
 ---
 
 <!--more-->

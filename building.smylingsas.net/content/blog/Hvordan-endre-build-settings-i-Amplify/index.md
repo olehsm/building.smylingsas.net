@@ -8,7 +8,7 @@ tags:
   - hugo
 author: Ole Halvor Smylingsås
 description: null
-image: null
+image: aws-logo.jpg
 ---
 <!--more-->
 

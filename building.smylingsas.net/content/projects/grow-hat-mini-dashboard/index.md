@@ -6,7 +6,7 @@ author: Ole Halvor Smylingsås
 tags: null
 pageresources: []
 description: null
-image: null
+image: finishedgrowpi.jpg
 githubLink: null
 demolink: null
 ---

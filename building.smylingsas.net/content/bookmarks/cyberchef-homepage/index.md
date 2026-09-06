@@ -6,6 +6,6 @@ tags:
     - Tools
 author: Ole Halvor Smylingsås
 description: null
-image: cyberchef-homepage.jpg
+image: cyberchef-128x128.png
 externalLink: null
 ---

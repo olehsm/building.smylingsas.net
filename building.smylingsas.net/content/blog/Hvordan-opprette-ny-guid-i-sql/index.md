@@ -7,7 +7,7 @@ tags:
   - sql
 author: Ole Halvor Smylingsås
 description: null
-image: null
+image: microsoft-sql-server4529.jpg
 ---
 TIL: Hvordan opprette GUID?
 <!--more-->
