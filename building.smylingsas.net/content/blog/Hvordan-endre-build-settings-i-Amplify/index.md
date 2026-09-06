@@ -1,5 +1,5 @@
 ---
-title: 'Hvordan Endre Build Settings i Amplify'
+title: 'Hvordan endre buildsettings i Amplify'
 date:  2026-06-02T13:00:07Z
 draft: true
 pageresources: []

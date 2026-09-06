@@ -1,5 +1,5 @@
 ---
-title: 'Anbefalte Extensions I VSCode'
+title: 'Anbefalte extensions i VS Code'
 date:  2026-06-02T12:56:21Z
 draft: true
 pageresources: []
@@ -9,7 +9,7 @@ author: Ole Halvor Smylingsås
 description: null
 image: visual-studio-icon.png
 ---
-ett opp anbefalte extensions for et prosjekt i Visual Studio Code
+Sett opp anbefalte extensions for et prosjekt i Visual Studio Code
 <!--more-->
 
 Det er to måter å gjøre dette på avhengig av om ditt workspace er et multi-root workspace eller ikke. Dette prosjektet er satt opp som multi-root, det vil si at prosjektet inneholder en workspace og har en .code-workspace fil på roten.

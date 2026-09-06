@@ -1,5 +1,5 @@
 ---
-title: 'Kent C Dodds Homepage'
+title: 'Kent C Dodds sin hjemmeside'
 date: 2025-08-31T08:52:38Z
 draft: true
 tags:

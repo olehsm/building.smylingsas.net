@@ -1,5 +1,5 @@
 ---
-title: 'Fav Icon Generator'
+title: 'Fav Icon generator'
 date: 2025-06-16T18:36:36Z
 draft: true
 tags: 

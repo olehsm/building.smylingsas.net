@@ -1,5 +1,5 @@
 ---
-title: 'Hvordan Opprette Ny Guid I Sql'
+title: 'Hvordan opprette ny GUID i SQL'
 date:  2026-06-02T13:07:09Z
 draft: true
 pageresources: []

@@ -1,5 +1,5 @@
 ---
-title: 'Cyberchef Homepage'
+title: 'Cyberchef hjemmeside'
 date: 2025-08-31T10:48:29Z
 draft: true
 tags: 

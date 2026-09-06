@@ -1,5 +1,5 @@
 ---
-title: 'Grow Hat Mini Dashboard'
+title: 'Grow Hat mini dashboard'
 date:  2026-02-15T10:02:18Z
 draft: true
 author: Ole Halvor Smylingsås

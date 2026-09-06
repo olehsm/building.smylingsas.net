@@ -1,5 +1,5 @@
 ---
-title: 'Hugo Official'
+title: 'Offisell hjemmeside for Hugo SSG'
 date:  2025-06-13T22:08:20Z
 draft: true
 tags: 

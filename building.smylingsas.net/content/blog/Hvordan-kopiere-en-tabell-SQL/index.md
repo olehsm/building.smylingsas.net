@@ -1,5 +1,5 @@
 ---
-title: 'Hvordan Kopiere en Tabell SQL'
+title: 'Hvordan kopiere en tabell SQL'
 date:  2026-06-02T13:09:52Z
 draft: true
 pageresources: []

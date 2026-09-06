@@ -1,5 +1,5 @@
 ---
-title: 'Arjan Einbu Homepage'
+title: 'Arjan Einbus hjemmeside'
 date: 2025-08-31T10:44:50Z
 draft: true
 tags: 
