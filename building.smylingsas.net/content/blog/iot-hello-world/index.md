@@ -4,7 +4,7 @@ date:  2025-09-13T15:58:59Z
 draft: true
 pageresources: []
 tags: 
-    - Rasberry Pi
+    - Raspberry Pi
 author: Ole Halvor Smylingsås
 description: 'En liten tutorial som plutselig ble større. hello world med lyspære ble til dev container, kopiere dockerfiler til remote host med ssh osv'
 image: RPI_Twitter_COLOUR.webp
