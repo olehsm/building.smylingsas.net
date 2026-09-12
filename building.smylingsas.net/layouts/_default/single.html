@@ -1,14 +1,25 @@
 {{ define "main" }}
+{{ $page := . }}
 <div class="layout layout--article">
+	
+	
+	{{ if eq .Type "blog" }}
+		<a href="/blog" class="back-link">Tilbake til blog</a>
+	{{ else if eq .Type "projects" }}
+		<a href="/projects" class="back-link">Tilbake til prosjekter</a>
+	{{ else if eq .Type "bookmarks" }}
+		<a href="/bookmarks" class="back-link">Tilbake til bokmerker</a>
+	{{ end }}
+
 	<section class="article-image">
 		<div class="container">
 			{{ if .Params.image }}
-		{{ with .Resources.Get .Params.image }}
-			<div >
-				<img src="{{ .RelPermalink}}" alt="Header image" />
-			</div>
-		{{ end }}
-	{{ end }}
+				{{ with .Resources.Get .Params.image }}
+					<div >
+						<img src="{{ .RelPermalink}}" alt="Header image" />
+					</div>
+				{{ end }}
+			{{ end }}
 		</div>	
 	</section>
 	
@@ -20,9 +31,96 @@
 			<p class="list-subtitle">{{.Params.subtitle}}</p>
 		</div>
 	</section>
+	<section class="article-meta">
+		<div class="container">
+			<p class="article-meta__item">
+				<time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
+					{{ .Date.Format "January 2, 2006" }}
+				</time>
+			</p>
+			{{ with .Params.author }}
+				<p class="article-meta__item">av {{ . }}</p>
+			{{ end }}
+			<p class="article-meta__item">
+				{{ with .Params.categories }}
+					{{ range $index, $element := . }}
+						{{ if $index }}, {{ end }}<a href="/categories/{{ $element | urlize }}">{{ $element }}</a>
+					{{ end }}
+				{{ end }}
+			</p>
+			<p class="article-meta__item">
+				{{ with .Params.tags }}
+					{{ range $index, $element := . }}
+						{{ if $index }}, {{ end }}<a href="/tags/{{ $element | urlize }}">{{ $element }}</a>
+					{{ end }}
+				{{ end }}
+			</p>
+			<p class="article-meta__item">
+				Word count: {{ .WordCount }}
+			</p>
+			<p class="article-meta__item">
+				Reading time: {{ .ReadingTime }} min
+			</p>
+			<p class="article-meta__item">
+				Last modified: {{ .Lastmod.Format "January 2, 2006" }}
+			</p>
+		</div>
+	</section>
+	<section class="related-articles">
+		<div class="container">
+			<h2 class="h2-list">Relaterte artikler</h2>
+			{{ $related := .Site.RegularPages.Related . | first 3 }}
+			{{ if $related }}
+				<ul>
+					{{ range $related }}
+						<li >
+							<a href="{{ .RelPermalink }}">
+								<div>
+									<h3>{{ .Title }}</h3>
+									<p>{{ .Summary }}</p>
+								</div>
+							</a>
+						</li>
+					{{ end }}
+				</ul>
+			{{ else }}
+				Ingen relaterte artikler funnet.
+			{{ end }}
+		</div>
+	</section>
+	<section class="next-previous">
+		<div class="container">
+			{{ with .Next }}
+				<a href="{{ .RelPermalink }}" class="next-previous__item next-previous__item--next">
+					<span>Neste artikkel</span>
+					<h3>{{ .Title }}</h3>
+				</a>
+			{{ end }}
+			{{ with .Prev }}
+				<a href="{{ .RelPermalink }}" class="next-previous__item next-previous__item--prev">
+					<span>Forrige artikkel</span>
+					<h3>{{ .Title }}</h3>
+				</a>
+			{{ end }}
+		</div>
+	</section>
+	<section>
+		<div class="container">
+			{{ with .Params.tags }}
+				{{ range $index, $element := . }}
+					<h2>Artikler med taggen: {{ $element }}</h2>
+					<ul>
+						{{ range where $page.Site.RegularPages "Params.tags" "intersect" (slice $element) }}
+							<li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+						{{ end }}
+					</ul>
+				{{ end }}
+			{{ end }}
+		</div>
+	</section>
 	<article class="article-content" data-pagefind-body>
 		<div class="container">
-		{{- .Content -}}
+			{{- .Content -}}
 		</div>
 	</article>
 	
