@@ -8,11 +8,38 @@
     align-items: stretch;
 
     &.list-view {
-        display: block;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+
+        .list-grid-item {
+            grid-template-columns: 150px minmax(0, 1fr);
+            align-items: start;
+        }
 
         .visual {
-            width: 100px;
-            height: 100px;
+            inline-size: 150px;
+            aspect-ratio: 16 / 9;
+            block-size: auto;
+            align-self: start;
+        }
+
+        .item__body {
+            min-inline-size: 0;
+            min-block-size: 100px;
+        }
+
+        .item__title {
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            overflow: hidden;
+        }
+
+        .item__body > p {
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 3;
+            overflow: hidden;
         }
     }
 }

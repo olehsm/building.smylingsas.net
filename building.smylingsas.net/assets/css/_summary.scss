@@ -17,16 +17,20 @@
 
 .list-grid.list-view .list-grid-item {
     display: grid;
-    grid-template-columns: 100px 1fr;
-    gap: 1rem;
-    padding: 1rem;
-    margin-block-end: 1rem;
+    grid-template-columns: 150px 1fr;
+    column-gap: 1rem;
 }
 
 .visual {
     aspect-ratio: 16 / 9;
     overflow: hidden;
     border-radius: 4px 4px 0 0;
+
+    picture {
+        display: block;
+        inline-size: 100%;
+        block-size: 100%;
+    }
 
     img {
         inline-size: 100%;
