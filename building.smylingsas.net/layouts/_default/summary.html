@@ -7,9 +7,13 @@
             <div class="item__body">
                 <h2 class="item__title">{{ .Title }}</h2>
                 {{.Summary}}
-                <time datetime="{{ .Date.Format "Mon, Jan 2, 2006" }}">
-                    {{ .Date.Format "Jan 2, 2006" }}
-                </time> 
+                {{ if eq .Kind "term" }}
+                    <p>{{ .Pages.Len }} {{ if eq .Pages.Len 1 }}innlegg{{ else }}innlegg{{ end }}</p>
+                {{ else }}
+                    <time datetime="{{ .Date.Format "Mon, Jan 2, 2006" }}">
+                        {{ .Date.Format "Jan 2, 2006" }}
+                    </time>
+                {{ end }}
             </div>
         </article>
     </a>
