@@ -1,4 +1,4 @@
 ---
 title: Hugo
-image: hugo-framwork-homepage.jpg
+image: hugo-logo.png
 ---
