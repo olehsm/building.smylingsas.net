@@ -4,8 +4,9 @@ date:  2026-06-02T13:00:07Z
 draft: true
 pageresources: []
 tags:
-  - amplify
+  - containers
   - hugo
+  - hosting
 author: Ole Halvor Smylingsås
 description: null
 image: aws-logo.jpg

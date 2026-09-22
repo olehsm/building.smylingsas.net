@@ -3,7 +3,8 @@ title: 'Grow Hat mini dashboard'
 date:  2026-02-15T10:02:18Z
 draft: true
 author: Ole Halvor Smylingsås
-tags: null
+tags: 
+    - Raspberry Pi
 pageresources: []
 description: null
 image: finishedgrowpi.jpg

@@ -4,7 +4,7 @@ date:  2026-06-02T12:56:21Z
 draft: true
 pageresources: []
 tags:
-  - misc
+  - tools
 author: Ole Halvor Smylingsås
 description: null
 image: visual-studio-icon.png

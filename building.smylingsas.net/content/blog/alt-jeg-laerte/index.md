@@ -6,8 +6,7 @@ pageresources: []
 tags: 
     - Hugo
     - Containers
-    - Docker
-    - JS
+    - Javascript
 author: Ole Halvor Smylingsås
 description: null
 image: 320hugo_logo.png

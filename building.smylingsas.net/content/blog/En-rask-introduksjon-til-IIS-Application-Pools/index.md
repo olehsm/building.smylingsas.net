@@ -4,7 +4,7 @@ date:  2026-06-02T13:12:08Z
 draft: true
 pageresources: []
 tags:
-  - misc
+  - hosting
 author: Ole Halvor Smylingsås
 description: null
 image: pool.jpg
