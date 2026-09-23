@@ -1,4 +1,4 @@
 ---
 title: Inspo
-image: hugo-framwork-homepage.jpg
+image: arjan_einbu_homepage.jpg
 ---

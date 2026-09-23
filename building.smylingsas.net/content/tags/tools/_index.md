@@ -1,4 +1,4 @@
 ---
 title: Tools
-image: hugo-framwork-homepage.jpg
+image: category-tools.jpg
 ---

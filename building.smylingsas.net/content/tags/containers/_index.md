@@ -1,4 +1,4 @@
 ---
 title: Containers
-image: hugo-framwork-homepage.jpg
+image: Types-of-shipping-containers-1.webp
 ---

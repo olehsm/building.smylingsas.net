@@ -1,4 +1,4 @@
 ---
 title: Javascript
-image: hugo-framwork-homepage.jpg
+image: javascript-file-vector-illustration_1186366-61337.jpg
 ---
