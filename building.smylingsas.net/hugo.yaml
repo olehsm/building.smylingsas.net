@@ -52,6 +52,13 @@ menu:
           identifier: "blog"
           params:
               icon: "blog"
+
+        - name: "Tags"
+          url: "/tags"
+          weight: 5
+          identifier: "tags"
+          params:
+              icon: "tag"      
     header:
         - name: "Network"
           url: "#network"
