@@ -6,7 +6,7 @@ tags:
     - A11y
 author: Ole Halvor Smylingsås
 description: null
-image: start.png
+image: stark.png
 externalLink: https://www.getstark.co/library/collections/
 ---
 
