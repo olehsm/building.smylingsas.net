@@ -9,7 +9,7 @@
             </div>
         </section>
 
-        <section class="">
+        <section class="list-controllers">
             <div class="container">
                 <div class="layout-toggle">
                     <button id="grid-view-btn" class="layout-button active">
@@ -35,22 +35,20 @@
 
         <section class="pagination">
             <div class="container">
-                <div class="something">
-                {{ if $paginator.HasPrev }}
-                    <a href="{{ $paginator.Prev.URL }}" class="prev"><</a>
-                {{ end }}
+                <div class="pagination-controlls">
+                    {{ if $paginator.HasPrev }}
+                        <a href="{{ $paginator.Prev.URL }}" class="prev"><</a>
+                    {{ end }}
 
-                {{ range $paginator.Pagers }}
-                    <a href="{{ .URL }}" class="{{ if eq . $paginator }}active{{ end }}">{{ .PageNumber }}</a>
-                {{ end }}
+                    {{ range $paginator.Pagers }}
+                        <a href="{{ .URL }}" class="{{ if eq . $paginator }}active{{ end }}">{{ .PageNumber }}</a>
+                    {{ end }}
 
-                {{ if $paginator.HasNext }}
-                    <a href="{{ $paginator.Next.URL }}" class="next">></a>
-                {{ end }} 
+                    {{ if $paginator.HasNext }}
+                        <a href="{{ $paginator.Next.URL }}" class="next">></a>
+                    {{ end }} 
                 </div>
-                
-            </div>
-            
+            </div> 
         </section>
     </div>
 {{ end }}

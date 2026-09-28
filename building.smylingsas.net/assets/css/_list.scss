@@ -59,29 +59,31 @@
 }
 
 
-.something {
+.pagination-controlls {
     display: flex;
     flex-direction: row;
     justify-content: center;
     inline-size: 100%;
-    background-color: var(--primary-color);
     padding: 0.5em;
-    border-radius: var(--default-border-radius);
     gap: 10px;
 
     a {
         color: var(--text-color);
-    }
-}
+        display: inline-block;
+        padding: 0.5em 1em;
+        text-decoration: none;
+        border: 1px solid var(--border-color);
+        background-color: var(--box-background);
+        border-radius: var(--default-border-radius);
+        transition: all 0.2s ease-in-out;
 
+        &:hover {
+            border: 1px solid var(--primary-color)
+        }
 
-.layout--article {
-    padding-block: clamp(3rem, 6vw, 6rem);
-
-    .container {
-        max-width: 1000px;
-        padding-inline: clamp(1rem, 2.5vw, 4rem);
-        margin-inline: auto;
+        &.active {
+            border: 1px solid var(--primary-color);
+        }
     }
 }
 
@@ -111,7 +113,5 @@
 
 .layout-toggle {
     display: flex;
-    gap: 0.5rem;
-    margin-block-start: 1rem;
     justify-content: flex-end;
 }
