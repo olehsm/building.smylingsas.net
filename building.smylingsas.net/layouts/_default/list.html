@@ -9,21 +9,18 @@
             </div>
         </section>
 
-        <section class="list-controllers">
-            <div class="container">
-                <div class="layout-toggle">
-                    <button id="grid-view-btn" class="layout-button active">
-                        {{ partial "icons/grid.svg.html" . }}
-                    </button>
-                    <button id="list-view-btn" class="layout-button">
-                        {{ partial "icons/list.svg.html" . }}
-                    </button>
-                </div>
-            </div>
-        </section>
-
         <section class="cards">
             <div class="container">
+                <div class="cards-toolbar">
+                    <div class="layout-toggle">
+                        <button id="grid-view-btn" class="layout-button active" type="button" aria-label="Grid view">
+                            {{ partial "icons/grid.svg.html" . }}
+                        </button>
+                        <button id="list-view-btn" class="layout-button" type="button" aria-label="List view">
+                            {{ partial "icons/list.svg.html" . }}
+                        </button>
+                    </div>
+                </div>
                 <ul class="list-grid">
                     {{ $paginator := .Paginate .Pages }}
                     {{ range $paginator.Pages }}

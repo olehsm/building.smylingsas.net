@@ -115,3 +115,15 @@
     display: flex;
     justify-content: flex-end;
 }
+
+
+.cards-toolbar {
+    display: flex;
+    justify-content: flex-end;
+    padding-block-end: 0.75rem;
+}
+
+
+.cards-toolbar .layout-toggle {
+    gap: 0.25rem;
+}
