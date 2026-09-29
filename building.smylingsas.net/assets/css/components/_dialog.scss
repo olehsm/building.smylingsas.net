@@ -1,0 +1,22 @@
+dialog {
+    border: none;
+    border-radius: var(--default-border-radius);
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    width: clamp(300px, 90vw, 500px);
+    padding: 0;
+    box-shadow: 0 0 10px var(--shadow-default);
+}
+
+
+dialog::backdrop {
+    background: var(--backdrop-bg);
+}
+
+
+.modal-content {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
