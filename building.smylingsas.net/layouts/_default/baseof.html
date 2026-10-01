@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="{{ .Site.LanguageCode }}">
     <head>
-        {{ partial "head.html" . }}
+        {{ partial "html-document/head.html" . }}
     </head>
     <body>
         <div class="app-layout {{ if eq .Kind "page" }}single{{ end }}">
@@ -9,7 +9,7 @@
                 {{ partial "header.html" . }} 
             </header>
             <nav class="sidebar">
-                {{ partial "nav.html" . }}
+                {{ partial "sidebar.html" . }}
             </nav>
             <main class="main">
                 {{- block "main" . -}}{{- end -}}
@@ -17,6 +17,6 @@
         </div>
         
         {{- partial "dialogs/search.html" . -}}
-        {{- partial "scripts.html" . -}}
+        {{- partial "html-document/scripts.html" . -}}
     </body>
 </html>

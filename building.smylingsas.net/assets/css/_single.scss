@@ -8,8 +8,8 @@
         grid-column: 1;
     }
 
-    > section:first-child {
-        grid-column: 1 / -1;
+    > aside {
+        grid-column: 2;
     }
 
     > article,
@@ -210,5 +210,15 @@
         font-size: var(--font-xs);
         -webkit-box-orient: vertical;
         -webkit-line-clamp: 3;
+    }
+}
+
+@media (max-width: 800px) {
+    .layout--article {
+        display: block;
+    }
+
+    .article-aside {
+        margin-block-start: 2rem;
     }
 }

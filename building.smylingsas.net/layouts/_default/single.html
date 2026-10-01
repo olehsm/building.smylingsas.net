@@ -1,8 +1,6 @@
 {{ define "main" }}
 {{ $page := . }}
 <div class="layout layout--article">
-	
-	
 	<article>
 		<section class="title hero">
 			<div class="container">
@@ -15,120 +13,26 @@
 
 		<section class="article-image">
 			<div class="container">
-				{{ if .Params.image }}
-					{{ with .Resources.Get .Params.image }}
-						<div >
-							<img src="{{ .RelPermalink}}" alt="Header image" />
-						</div>
-					{{ end }}
-				{{ end }}
+				{{ partial "single/article-image.html" . }}
 			</div>	
 		</section>
 
 
 	<section class="article-meta">
 		<div class="container">
-			<div>
-			<p class="article-meta__item">
-				Publisert: <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
-					{{ .Date.Format "2006, jan 2" }}
-				</time>
-			</p>
-			<p class="article-meta__item">
-				Sist oppdatert: {{ .Lastmod.Format "2006, jan 2"  }}
-			</p>
-		</div>
-		<div>
-			<p class="article-meta__item">
-					Antall ord: {{ .WordCount }}
-				</p>
-				<p class="article-meta__item">
-					Lesetid	: {{ .ReadingTime }} min
-				</p>
-		</div>
-		<div>
-			<p class="article-meta__item">
-				{{ with .Params.categories }}
-					{{ range $index, $element := . }}
-						{{ if $index }}, {{ end }}<a href="/categories/{{ $element | urlize }}">{{ $element }}</a>
-					{{ end }}
-				{{ end }}
-			</p>
-			<p class="article-meta__item">
-				{{ with .Params.tags }}
-					{{ range $index, $element := . }}
-						{{ if $index }}, {{ end }}<a href="/tags/{{ $element | urlize }}">{{ $element }}</a>
-					{{ end }}
-				{{ end }}
-			</p>
-			</div>
+			{{ partial "single/article-meta.html" . }}
 		</div>
 	</section>
 
-<article class="article-content" data-pagefind-body>
+	<section class="article-content" data-pagefind-body>
 		<div class="container">
 			{{- .Content -}}
 		</div>
+	</section>
 	</article>
 
-		</article>
-		<aside class="article-aside">
-			<section class="related-articles">
-		<div class="container">
-			<h2 class="h2-list">Relaterte artikler</h2>
-			{{ $related := .Site.RegularPages.Related . | first 3 }}
-			{{ if $related }}
-				<ul>
-					{{ range $related }}
-						<li >
-							<a href="{{ .RelPermalink }}">
-								<div>
-									<h3>{{ .Title }}</h3>
-									<p>{{ .Summary }}</p>
-								</div>
-							</a>
-						</li>
-					{{ end }}
-				</ul>
-			{{ else }}
-				Ingen relaterte artikler funnet.
-			{{ end }}
-		</div>
-	</section>
-	<section class="next-previous">
-		<div class="container">
-			{{ with .Next }}
-				
-					<h2>Neste artikkel</h2>
-					<a href="{{ .RelPermalink }}" class="next-previous__item next-previous__item--next">
-						<h3>{{ .Title }}</h3>
-					</a>
-			{{ end }}
-			{{ with .Prev }}
-				
-					<h2>Forrige artikkel</h2>
-					<a href="{{ .RelPermalink }}" class="next-previous__item next-previous__item--prev">
-					<h3>{{ .Title }}</h3>
-					</a>
-			{{ end }}
-		</div>
-	</section>
-	<section>
-		<div class="container">
-			{{ with .Params.tags }}
-				{{ range $index, $element := . }}
-					<h2>Artikler med taggen: {{ $element }}</h2>
-					<ul>
-						{{ range where $page.Site.RegularPages "Params.tags" "intersect" (slice $element) }}
-							<li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
-						{{ end }}
-					</ul>
-				{{ end }}
-			{{ end }}
-		</div>
-	</section>
-		</aside>
-	</div>
+	{{ partial "single/article-aside.html" . }}
+</div>
 
 	
 	

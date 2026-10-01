@@ -1,0 +1,58 @@
+<aside class="article-aside">
+		<section class="related-articles">
+	<div class="container">
+		<h2 class="h2-list">Relaterte poster</h2>
+		{{ $related := .Site.RegularPages.Related . | first 3 }}
+		{{ if $related }}
+			<ul>
+				{{ range $related }}
+						<li>
+							<article>
+								<a href="{{ .RelPermalink }}">
+									<div>
+										<h3>{{ .Title }}</h3>
+										<p>{{ .Summary }}</p>
+									</div>
+								</a>
+							</article>
+						</li>
+				{{ end }}
+			</ul>
+		{{ else }}
+			Ingen relaterte artikler funnet.
+		{{ end }}
+	</div>
+</section>
+<section class="next-previous">
+	<div class="container">
+		{{ with .Next }}
+			
+				<h2>Neste artikkel</h2>
+				<a href="{{ .RelPermalink }}" class="next-previous__item next-previous__item--next">
+					<h3>{{ .Title }}</h3>
+				</a>
+		{{ end }}
+		{{ with .Prev }}
+			
+				<h2>Forrige artikkel</h2>
+				<a href="{{ .RelPermalink }}" class="next-previous__item next-previous__item--prev">
+				<h3>{{ .Title }}</h3>
+				</a>
+		{{ end }}
+	</div>
+</section>
+{{/*  <section>
+	<div class="container">
+		{{ with .Params.tags }}
+			{{ range $index, $element := . }}
+				<h2>Artikler med taggen: {{ $element }}</h2>
+				<ul>
+					{{ range where $page.Site.RegularPages "Params.tags" "intersect" (slice $element) }}
+						<li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+					{{ end }}
+				</ul>
+			{{ end }}
+		{{ end }}
+	</div>
+</section>  */}}
+	</aside>

@@ -1,0 +1,7 @@
+{{ if .Params.image }}
+    {{ with .Resources.Get .Params.image }}
+        <div >
+            <img src="{{ .RelPermalink}}" alt="Header image" />
+        </div>
+    {{ end }}
+{{ end }}
