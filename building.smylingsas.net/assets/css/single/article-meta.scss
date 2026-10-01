@@ -1,0 +1,23 @@
+.article-meta {
+    padding-block: 1rem;
+
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.35rem 1.25rem;
+    }
+
+    &__item {
+        margin: 0;
+        color: color-mix(in srgb, var(--text-color) 62%, transparent);
+        font-size: var(--font-xs);
+        letter-spacing: 0.02em;
+    }
+
+    a {
+        color: var(--text-color);
+        text-decoration: underline;
+        text-decoration-color: var(--secondary-color);
+        text-underline-offset: 0.2em;
+    }
+}

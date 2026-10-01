@@ -1,0 +1,43 @@
+.article-aside {
+    padding-block-start: clamp(4rem, 10vh, 8rem);
+    background-color: var(--box-background);
+}
+
+
+
+.article-aside {
+    align-self: start;
+    padding-block: clamp(1.5rem, 4vw, 3rem);
+    background: var(--box-background);
+
+    section + section {
+        margin-block-start: 2.5rem;
+    }
+
+    h2 {
+        margin-block-end: 1rem;
+        color: var(--text-color);
+        font-size: var(--font-lg);
+        line-height: 1.2;
+    }
+
+    a {
+        color: var(--text-color);
+    }
+
+    .related-articles ul {
+        display: grid;
+        gap: 0.75rem;
+    }
+
+
+    .related-articles p {
+        display: -webkit-box;
+        margin-block-start: 0.4rem;
+        overflow: hidden;
+        color: color-mix(in srgb, var(--text-color) 62%, transparent);
+        font-size: var(--font-xs);
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3;
+    }
+}

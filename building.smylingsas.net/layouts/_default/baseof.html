@@ -6,10 +6,10 @@
     <body>
         <div class="app-layout {{ if eq .Kind "page" }}single{{ end }}">
             <header class="header">
-                {{ partial "header.html" . }} 
+                {{ partial "layout/header.html" . }} 
             </header>
             <nav class="sidebar">
-                {{ partial "sidebar.html" . }}
+                {{ partial "layout/sidebar.html" . }}
             </nav>
             <main class="main">
                 {{- block "main" . -}}{{- end -}}
