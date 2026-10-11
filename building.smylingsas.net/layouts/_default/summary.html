@@ -1,20 +1,18 @@
-<li>
-    <a class="item__link" href="{{ .Permalink }}">
-        <article class="list-grid-item">
-            <div class="visual image-blur-wrapper">
-                {{ partial "card-image.html" . }}
-            </div>
-            <div class="item__body">
-                <h2 class="item__title">{{ .Title }}</h2>
-                {{.Summary}}
-                {{ if eq .Kind "term" }}
-                    <p>{{ .Pages.Len }} {{ if eq .Pages.Len 1 }}innlegg{{ else }}innlegg{{ end }}</p>
-                {{ else }}
-                    <time datetime="{{ .Date.Format "Mon, Jan 2, 2006" }}">
-                        {{ .Date.Format "Jan 2, 2006" }}
-                    </time>
-                {{ end }}
-            </div>
-        </article>
-    </a>
-</li>
+<a class="item__link" href="{{ .Permalink }}">
+    <article class="list-grid-item">
+        <div class="visual image-blur-wrapper">
+            {{ partial "card-image.html" . }}
+        </div>
+        <div class="item__body">
+            <h2 class="item__title">{{ .Title }}</h2>
+            {{.Summary}}
+            {{ if eq .Kind "term" }}
+                <p>{{ .Pages.Len }} {{ if eq .Pages.Len 1 }}innlegg{{ else }}innlegg{{ end }}</p>
+            {{ else }}
+                <time datetime="{{ .Date.Format "Mon, Jan 2, 2006" }}">
+                    {{ .Date.Format "Jan 2, 2006" }}
+                </time>
+            {{ end }}
+        </div>
+    </article>
+</a>
