@@ -1,5 +1,5 @@
 ---
-title: 'En rask introduksjon til IIS Application pools'
+title: 'Introduksjon til IIS Application pools'
 date:  2026-06-02T13:12:08Z
 draft: true
 pageresources: []

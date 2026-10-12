@@ -1,47 +1,41 @@
 {{ define "main" }}
 {{ $page := . }}
-<div class="layout layout--article">
-	<article>
-		<section class="title hero">
-			<div class="container">
+<div class="container">
+	<div class="layout layout--article">
+		<article>
+			<section class="title hero">
 				<h1 class="h1-list">
 					{{.Title}}
 				</h1>
 				<p class="list-subtitle">{{.Params.subtitle}}</p>
-			</div>
-		</section>
+			</section>
 
-		<section class="article-image">
-			<div class="container">
+			<section class="article-image">
 				{{ partial "single/article-image.html" . }}
-			</div>	
+			</section>
+
+
+		<section class="article-meta">
+			{{ partial "single/article-meta.html" . }}
 		</section>
 
-
-	<section class="article-meta">
-		<div class="container">
-			{{ partial "single/article-meta.html" . }}
-		</div>
-	</section>
-
-	<section class="article-content" data-pagefind-body>
-		<div class="container">
+		<section class="article-content" data-pagefind-body>
 			{{- .Content -}}
-		</div>
-	</section>
-	</article>
+		</section>
+		</article>
 
-	{{ partial "single/article-aside.html" . }}
-</div>
+		{{ partial "single/article-aside.html" . }}
+	</div>
 
-	
-	
-	{{/*  <section class="table-of-contents">
-		<div class="container">
-			{{ .TableOfContents }}
-		</div>
-	</section>  */}}
-	
-	
-</div>
+		
+		
+		{{/*  <section class="table-of-contents">
+			<div class="container">
+				{{ .TableOfContents }}
+			</div>
+		</section>  */}}
+		
+		
+	</div>
+</div>	
 {{ end }}

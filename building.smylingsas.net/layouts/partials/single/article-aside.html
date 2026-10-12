@@ -1,46 +1,33 @@
 <aside class="article-aside">
+	<div class="container">
 		<section class="related-articles">
-	<div class="container">
-		<h2 class="h2-list">Relaterte poster</h2>
-		{{ $related := .Site.RegularPages.Related . | first 3 }}
-		{{ if $related }}
-			<ul>
-				{{ range $related }}
-						<li>
-							<article>
-								<a href="{{ .RelPermalink }}">
-									<div>
-										<h3>{{ .Title }}</h3>
-										<p>{{ .Summary }}</p>
-									</div>
-								</a>
-							</article>
-						</li>
-				{{ end }}
-			</ul>
-		{{ else }}
-			Ingen relaterte artikler funnet.
-		{{ end }}
-	</div>
-</section>
-<section class="next-previous">
-	<div class="container">
-		{{ with .Next }}
-			
-				<h2>Neste artikkel</h2>
-				<a href="{{ .RelPermalink }}" class="next-previous__item next-previous__item--next">
-					<h3>{{ .Title }}</h3>
-				</a>
-		{{ end }}
-		{{ with .Prev }}
-			
+			<h2 class="h2-list">Relaterte poster</h2>
+			{{ $related := .Site.RegularPages.Related . | first 3 }}
+			{{ if $related }}
+				<ul>
+					{{ range $related }}
+							<li>{{ .Render "summary" }}</li>
+					{{ end }}
+				</ul>
+			{{ else }}
+				Ingen relaterte artikler funnet.
+			{{ end }}
+		</section>
+		
+		<section class="next-previous">
+			{{ with .Next }}
+			<div class="next-article">
+					<h2>Neste artikkel</h2>
+					{{ .Render "summary" }}
+			</div>
+			{{ end }}
+			{{ with .Prev }}
+			<div class="previous-article">
 				<h2>Forrige artikkel</h2>
-				<a href="{{ .RelPermalink }}" class="next-previous__item next-previous__item--prev">
-				<h3>{{ .Title }}</h3>
-				</a>
-		{{ end }}
-	</div>
-</section>
+				{{ .Render "summary" }}
+			</div>
+			{{ end }}
+		</section>
 {{/*  <section>
 	<div class="container">
 		{{ with .Params.tags }}
@@ -55,4 +42,5 @@
 		{{ end }}
 	</div>
 </section>  */}}
-	</aside>
+	</div>
+</aside>

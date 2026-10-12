@@ -44,63 +44,6 @@
 }
 
 
-.latest-posts,
-.latest-bookmarks,
-.tag-cloud {
-    h2 {
-        color: var(--primary-color);
-    }
-}
-
-
-.latest-posts,
-.latest-bookmarks {
-    a {
-        color: var(--text-color);
-    }
-}
-
-
-.latest-bookmarks,
-.tag-cloud {
-    h2 {
-        color: var(--primary-color);
-    }
-}
-
-
-.container {
-    max-width: 1500px;
-    padding-inline: clamp(1rem, 2.5vw, 4rem);
-    margin-inline: auto;
-}
-
-
-.tag-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-
-    a {
-        width: auto;
-        display: block;
-        padding: 1em;
-        text-align: center;
-        background-color: var(--secondary-color);
-        color: var(--text-color);
-        text-transform: capitalize;
-        border-radius: var(--default-border-radius);
-        border: 2px solid var(--card-bg);
-    }
-
-    a:hover {
-        border: 2px solid var(--primary-color);
-        color: var(--text-color);
-        text-decoration: none;
-    }
-}
-
-
 .home-cta {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -152,5 +95,62 @@
             inline-size: 100%;
             block-size: 100%;
         }
+    }
+}
+
+
+.latest-posts,
+.latest-bookmarks,
+.tag-cloud {
+    h2 {
+        color: var(--primary-color);
+    }
+}
+
+
+.latest-posts,
+.latest-bookmarks {
+    a {
+        color: var(--text-color);
+    }
+}
+
+
+.latest-bookmarks,
+.tag-cloud {
+    h2 {
+        color: var(--primary-color);
+    }
+}
+
+
+.container {
+    max-width: 1200px;
+    padding-inline: clamp(1rem, 2.5vw, 4rem);
+    margin-inline: auto;
+}
+
+
+.tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+    a {
+        width: auto;
+        display: block;
+        padding: 1em;
+        text-align: center;
+        background-color: var(--secondary-color);
+        color: var(--text-color);
+        text-transform: capitalize;
+        border-radius: var(--default-border-radius);
+        border: 2px solid var(--card-bg);
+    }
+
+    a:hover {
+        border: 2px solid var(--primary-color);
+        color: var(--text-color);
+        text-decoration: none;
     }
 }

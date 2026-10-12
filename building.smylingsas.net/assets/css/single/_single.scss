@@ -2,7 +2,6 @@
     display: grid;
     grid-template-columns: minmax(0, 2fr) minmax(18rem, 1fr);
     gap: clamp(2rem, 5vw, 5rem);
-    padding-block-end: clamp(3rem, 8vw, 7rem);
 
     > article {
         grid-column: 1;
@@ -15,11 +14,6 @@
     > article,
     > aside {
         min-inline-size: 0;
-    }
-
-    .container {
-        padding-inline: clamp(1rem, 2.5vw, 4rem);
-        margin-inline: auto;
     }
 }
 

@@ -1,16 +1,14 @@
 {{ define "main" }}
+<div class="container">    
     <div class="layout layout--list">
         <section class="title hero">
-            <div class="container">
                 <h1 class="h1-list">
                     {{.Title}}
                 </h1>
                 <p class="list-subtitle">{{.Params.subtitle}}</p>
-            </div>
         </section>
 
         <section class="cards">
-            <div class="container">
                 <div class="cards-toolbar">
                     <div class="layout-toggle">
                         <button id="grid-view-btn" class="layout-button active" type="button" aria-label="Grid view">
@@ -27,11 +25,9 @@
                         <li>{{ .Render "summary" }}</li>
                     {{ end }}
                 </ul>    
-            </div> 
         </section>
 
         <section class="pagination">
-            <div class="container">
                 <div class="pagination-controlls">
                     {{ if $paginator.HasPrev }}
                         <a href="{{ $paginator.Prev.URL }}" class="prev"><</a>
@@ -45,7 +41,7 @@
                         <a href="{{ $paginator.Next.URL }}" class="next">></a>
                     {{ end }} 
                 </div>
-            </div> 
         </section>
     </div>
+</div>    
 {{ end }}

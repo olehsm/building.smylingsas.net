@@ -1,14 +1,6 @@
 .article-aside {
     padding-block-start: clamp(4rem, 10vh, 8rem);
     background-color: var(--box-background);
-}
-
-
-
-.article-aside {
-    align-self: start;
-    padding-block: clamp(1.5rem, 4vw, 3rem);
-    background: var(--box-background);
 
     section + section {
         margin-block-start: 2.5rem;
