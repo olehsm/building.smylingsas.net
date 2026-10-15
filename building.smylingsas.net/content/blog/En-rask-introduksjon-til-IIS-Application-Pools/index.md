@@ -20,7 +20,7 @@ Internet Information Service (fra nå IIS) er webserverprogramvare fra Microsoft
 
 Hver application pool har sin egen arbeidsprosess, denne arbeidsprossesen er en windowsprosess kjent som w3wp.exe. Denne prosessen håndterer forespørsler sendt til webserveren.
 
-## Hva "application pool recycling" i IIS?
+## Hva er "application pool recycling" i IIS?
 Med recycling menes det at arbeidsprosessen (w3wp.exe) blir terminert og erstattet med en ny. Recycle blir gjort for å hindre kræsj i en applikasjon, heng eller minnelekkasje.
 
 ## Antall applikasjoner i en application pool - best praksis
