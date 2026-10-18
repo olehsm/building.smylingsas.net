@@ -1,0 +1,50 @@
+{{ if and .IsPage (not .IsHome) }}
+{{ $postsPage := site.GetPage "/blog" }}
+{{ $bookmarksPage := site.GetPage "/bookmarks" }}
+{{ $projectsPage := site.GetPage "/projects" }}
+    <nav aria-label="breadcrumb" class="breadcrumb-nav">
+        <ol class="breadcrumb-list" >
+            <li>
+                <a href="{{ "/" | relLangURL }}" >
+                    <span>Hjem</span>
+                </a>
+                <span aria-hidden="true" class="breadcrumb-sep">›</span>
+            </li>
+            
+            {{ if eq .Type "blog"}}
+                {{ with $postsPage }}
+                    <li>
+                        <a href="{{ .RelPermalink }}">
+                            <span>Blog</span>
+                        </a>
+                        <span aria-hidden="true" class="breadcrumb-sep">›</span>
+                    </li>
+                {{ end }}
+            {{ end }}
+            {{ if eq .Type "bookmarks"}}    
+                {{ with $bookmarksPage }}
+                    <li>
+                        <a href="{{ .RelPermalink }}">
+                            <span>Bokmerker</span>
+                        </a>
+                        <span aria-hidden="true" class="breadcrumb-sep">›</span>
+                    </li>
+                {{ end }}
+            {{end}}
+            {{ if eq .Type "projects"}}    
+                {{ with $projectsPage }}
+                    <li>
+                        <a href="{{ .RelPermalink }}">
+                            <span>Prosjekter</span>
+                        </a>
+                        <span aria-hidden="true" class="breadcrumb-sep">›</span>
+                    </li>
+                {{ end }}
+            {{end}}
+                
+            <li>
+                <span class="breadcrumb-current">{{ .Title }}</span>
+            </li>
+        </ol>
+    </nav>
+{{ end }}

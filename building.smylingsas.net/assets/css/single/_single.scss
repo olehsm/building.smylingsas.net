@@ -18,6 +18,26 @@
 }
 
 
+.breadcrumb-list {
+    margin-block: 1.5rem;
+    list-style-type: none;
+    display: flex;
+    gap: 0.5rem;
+    flex-direction: row;
+
+    a{
+        color: var(--text-color);
+        text-decoration: underline;
+        text-decoration-color: var(--secondary-color);
+        text-underline-offset: 0.2em;
+    }
+
+    .breadcrumb-current {
+        color: var(--primary-color);
+    }
+}
+
+
 .article-content {
     font-size: clamp(1rem, 2vw, 1.4rem);
     line-height: 1.7;
