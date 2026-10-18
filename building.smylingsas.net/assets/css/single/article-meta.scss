@@ -1,11 +1,9 @@
 .article-meta {
     padding-block: 1rem;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
 
-    .container {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.35rem 1.25rem;
-    }
 
     &__item {
         margin: 0;
@@ -15,9 +13,17 @@
     }
 
     a {
-        color: var(--text-color);
+        color: var(--secondary-color);
         text-decoration: underline;
         text-decoration-color: var(--secondary-color);
         text-underline-offset: 0.2em;
+        
+    }
+
+    svg {
+        width: 1.25rem;
+        height: 1.25rem;
+        vertical-align: middle;
+        fill: var(--primary-color);
     }
 }

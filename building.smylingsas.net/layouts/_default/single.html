@@ -9,19 +9,22 @@
 				</h1>
 				<p class="list-subtitle">{{.Params.subtitle}}</p>
 			</section>
+			
+			<section class="article-breadcrumbs">
+				{{ partial "single/article-breadcrumbs.html" . }}
+			</section>
+
+			<section class="article-meta">
+				{{ partial "single/article-meta.html" . }}
+			</section>
 
 			<section class="article-image">
 				{{ partial "single/article-image.html" . }}
 			</section>
 
-
-		<section class="article-meta">
-			{{ partial "single/article-meta.html" . }}
-		</section>
-
-		<section class="article-content" data-pagefind-body>
-			{{- .Content -}}
-		</section>
+			<section class="article-content" data-pagefind-body>
+				{{- .Content -}}
+			</section>
 		</article>
 
 		{{ partial "single/article-aside.html" . }}
@@ -36,6 +39,5 @@
 		</section>  */}}
 		
 		
-	</div>
 </div>	
 {{ end }}
