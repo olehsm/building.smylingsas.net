@@ -1,0 +1,23 @@
+.article-breadcrumbs {
+    margin-block-end: 1rem;
+}
+
+
+.breadcrumb-list {
+    list-style-type: none;
+    display: flex;
+    gap: 0.5rem;
+    flex-direction: row;
+    opacity: 0.4;
+
+    a{
+        color: var(--text-color);
+        text-decoration: underline;
+        text-decoration-color: var(--secondary-color);
+        text-underline-offset: 0.2em;
+    }
+
+    // .breadcrumb-current {
+    //     color: var(--primary-color);
+    // }
+}

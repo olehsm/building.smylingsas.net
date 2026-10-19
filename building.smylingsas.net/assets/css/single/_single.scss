@@ -18,29 +18,9 @@
 }
 
 
-.breadcrumb-list {
-    margin-block: 1.5rem;
-    list-style-type: none;
-    display: flex;
-    gap: 0.5rem;
-    flex-direction: row;
-
-    a{
-        color: var(--text-color);
-        text-decoration: underline;
-        text-decoration-color: var(--secondary-color);
-        text-underline-offset: 0.2em;
-    }
-
-    .breadcrumb-current {
-        color: var(--primary-color);
-    }
-}
-
-
 .article-content {
     font-size: clamp(1rem, 2vw, 1.4rem);
-    line-height: 1.7;
+    line-height: 1.65;
     color: var(--text-color);
 
     h1,
@@ -49,10 +29,9 @@
     h4,
     h5,
     h6 {
-        margin-block-start: 2rem;
-        margin-block-end: 1rem;
-        color: var(--primary-color);
+        margin-block-end: 1.5rem;
         font-weight: 600;
+        line-height: 1.25;
     }
 
     h1 { font-size: clamp(2rem, 6vw, 6rem); }
@@ -63,7 +42,7 @@
     h6 { font-size: clamp(1rem, 1.5vw, 1.25rem); }
 
     p {
-        margin-block-end: 1.5rem;
+        margin-block-end: 2rem;
         font-size: inherit;
     }
 
@@ -71,13 +50,15 @@
         max-inline-size: 100%;
         block-size: auto;
         border-radius: var(--default-border-radius);
-        margin: 1rem 0;
+        margin-block-end: 1.5rem;
+        margin-inline: 0;
     }
 
     code {
         background: var(--primary-color);
         color: var(--text-color);
-        padding: 0.2rem 0.4rem;
+        padding-block: 0.2em;
+        padding-inline: 0.4em;
         border-radius: var(--default-border-radius);
         font-family: 'Courier New', monospace;
         font-size: 0.9em;
@@ -86,10 +67,11 @@
     pre {
         background: var(--primary-color);
         color: var(--text-color);
-        padding: 1rem;
+        padding: 1em;
         border-radius: var(--default-border-radius);
         overflow-x: auto;
-        margin: 1.5rem 0;
+        margin-block-end: 1.5rem;
+        margin-inline: 0;
 
         code {
             background: none;
@@ -105,38 +87,22 @@
 
     ul,
     ol {
-        margin-block: 1.5rem;
+        margin-block-end: 1.5rem;
         padding-inline-start: 2rem;
     }
 
     li {
-        margin-bottom: 0.5rem;
+        margin-block-end: 0.5rem;
     }
 
-    table {
-        width: 100%;
-        border-collapse: collapse;
-        margin: 1.5rem 0;
-        overflow-x: auto;
-        display: block;
-    }
-
-    th,
-    td {
-        border: 1px solid var(--border-color);
-        padding: 0.75rem;
-        text-align: left;
-    }
-
-    th {
-        background: var(--primary-color);
-        color: var(--text-color);
-    }
 
     blockquote {
         border-inline-start: 4px solid var(--secondary-color);
-        padding: 1rem 0 1rem 1rem;
-        margin: 1.5rem 0;
+        padding-block: 1rem;
+        padding-inline: 0;
+        padding-inline-start: 1rem;
+        margin-block-end: 1rem;
+        margin-inline: 0;
         font-style: italic;
         background: var(--primary-color);
         color: var(--text-color);

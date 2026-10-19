@@ -14,7 +14,8 @@
     background: var(--primary-color);
     color: var(--text-color);
     display: flex;
-    padding: 0 0.8rem;
+    padding-block: 0;
+    padding-inline: 0.8em;
     align-items: center;
     justify-content: space-between;
     inline-size: 100%;
@@ -26,7 +27,7 @@
     grid-area: sidebar;
     background: var(--primary-color);
     color: var(--text-color);
-    padding: var(--spacing-sm);
+    padding: 0.5em;
     overflow-y: auto;
     display: flex;
     flex-direction: column;
@@ -46,4 +47,11 @@
     border: 1px solid var(--border-color);
     border-radius: var(--default-border-radius);
     min-block-size: 0;
+}
+
+
+.container {
+    max-width: 1350px;
+    padding-inline: clamp(1em, 2.5vw, 4em);
+    margin-inline: auto;
 }

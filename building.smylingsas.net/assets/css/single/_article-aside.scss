@@ -1,13 +1,13 @@
 .article-aside {
-    padding-block-start: clamp(4rem, 10vh, 8rem);
+    padding-block-start: clamp(4em, 10vh, 8em);
     background-color: var(--box-background);
 
     section + section {
-        margin-block-start: 2.5rem;
+        margin-block-start: 2.5em;
     }
 
     h2 {
-        margin-block-end: 1rem;
+        margin-block-end: 1em;
         color: var(--text-color);
         font-size: var(--font-lg);
         line-height: 1.2;
@@ -25,7 +25,7 @@
 
     .related-articles p {
         display: -webkit-box;
-        margin-block-start: 0.4rem;
+        margin-block-start: 0.4em;
         overflow: hidden;
         color: color-mix(in srgb, var(--text-color) 62%, transparent);
         font-size: var(--font-xs);

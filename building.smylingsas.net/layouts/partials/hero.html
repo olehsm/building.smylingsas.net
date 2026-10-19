@@ -1,0 +1,8 @@
+<section class="hero">
+    <h1 class="hero-h1">
+        {{.Title}}
+    </h1>
+    {{ with .Params.subtitle }}
+        <p class="hero-subtitle">{{ . }}</p>
+    {{ end }}
+</section>

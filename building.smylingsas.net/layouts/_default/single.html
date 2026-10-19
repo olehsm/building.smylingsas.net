@@ -3,13 +3,8 @@
 <div class="container">
 	<div class="layout layout--article">
 		<article>
-			<section class="title hero">
-				<h1 class="h1-list">
-					{{.Title}}
-				</h1>
-				<p class="list-subtitle">{{.Params.subtitle}}</p>
-			</section>
-			
+			{{ partial "hero.html" . }}
+
 			<section class="article-breadcrumbs">
 				{{ partial "single/article-breadcrumbs.html" . }}
 			</section>

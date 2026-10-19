@@ -9,12 +9,13 @@
 </span>
 
 <span class="article-meta__item">
-        {{ partial "icons/note.svg.html" }}
-        {{ .WordCount }} ord
-    </span>
-    <span class="article-meta__item">
-        {{ partial "icons/clock.svg.html" }}{{ .ReadingTime }} min
-    </span>
+    {{ partial "icons/note.svg.html" }}
+    {{ .WordCount }} ord
+</span>
+<span class="article-meta__item">
+    {{ partial "icons/clock.svg.html" }}
+    {{ .ReadingTime }} min
+</span>
 
 <span class="article-meta__item">
     {{ with .Params.categories }}
@@ -23,6 +24,7 @@
         {{ end }}
     {{ end }}
 </span>
+
 <span class="article-meta__item">
     {{ with .Params.tags }}
         {{ range $index, $element := . }}
