@@ -48,7 +48,7 @@
     }
 }
 
-.item__link:hover {
+.list-grid .item__link:hover {
     .visual {
         img {
             filter: grayscale(0%) contrast(110%) brightness(1.05);

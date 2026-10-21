@@ -1,4 +1,6 @@
 <h{{ .Level }} id="{{ .Anchor }}" {{- with .Attributes.class }} class="{{ . }}" {{- end }}>
   {{ .Text }}
-  <a href="#{{ .Anchor }}">#</a>
+  <a href="#{{ .Anchor }}">
+    {{ partial "partials/icons/hyperlink.svg.html" . }}
+  </a>
 </h{{ .Level }}>

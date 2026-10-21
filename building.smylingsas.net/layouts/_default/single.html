@@ -13,6 +13,24 @@
 				{{ partial "single/article-meta.html" . }}
 			</section>
 
+			{{/*  <span class="article-categories">
+    {{ with .Params.categories }}
+        {{ range $index, $element := . }}
+            {{ if $index }}, {{ end }}<a href="/categories/{{ $element | urlize }}">{{ $element }}</a>
+        {{ end }}
+    {{ end }}
+</span>  */}}
+{{ with .Params.tags }}
+<section class="article-tags">
+    <ul class="tag-list">
+        {{ range $index, $element := . }}
+            <li><a href="/tags/{{ $element | urlize }}">{{ $element }}</a></li>
+        {{ end }}
+		</ul>
+    
+</section>
+{{ end }}
+
 			<section class="article-image">
 				{{ partial "single/article-image.html" . }}
 			</section>
@@ -20,6 +38,16 @@
 			<section class="article-content" data-pagefind-body>
 				{{- .Content -}}
 			</section>
+{{ with .Params.tags }}
+			<section class="article-tags">
+    <ul class="tag-list">
+        {{ range $index, $element := . }}
+            <li><a href="/tags/{{ $element | urlize }}">{{ $element }}</a></li>
+        {{ end }}
+</ul>
+    
+</section>
+{{ end }}
 		</article>
 
 		{{ partial "single/article-aside.html" . }}
