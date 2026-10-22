@@ -1,5 +1,5 @@
 <meta charset="utf-8" />
-<meta name="description" content="{{ .Params.description }}">
+<meta name="description" content="{{ .Params.description | default .Site.Params.description }}">
 <meta name="application-name" content="Smylingsas.net">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="theme-color" content="{{ $.Site.Params.themecolor }}">
