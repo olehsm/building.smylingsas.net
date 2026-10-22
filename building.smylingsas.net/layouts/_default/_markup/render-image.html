@@ -1,0 +1,25 @@
+{{- $destination := .Destination -}}
+{{- with .Page.Resources.GetMatch $destination -}}
+  {{- $image := . -}}
+  {{- if in (slice "jpeg" "png" "webp" "bmp" "tiff") $image.MediaType.SubType -}}
+    {{- $optimized := $image.Resize (printf "%dx webp q80" $image.Width) -}}
+    {{- $src := $optimized -}}
+    {{- $srcset := slice -}}
+    {{- range (slice 480 768 1200) -}}
+      {{- if and (le . $image.Width) (gt . 0) -}}
+        {{- $variant := $image.Resize (printf "%dx webp q80" .) -}}
+        {{- $srcset = $srcset | append (printf "%s %dw" $variant.RelPermalink $variant.Width) -}}
+        {{- $src = $variant -}}
+      {{- end -}}
+    {{- end -}}
+    {{- if not (in (slice 480 768 1200) $image.Width) -}}
+      {{- $srcset = $srcset | append (printf "%s %dw" $optimized.RelPermalink $optimized.Width) -}}
+      {{- $src = $optimized -}}
+    {{- end -}}
+    <img src="{{ $src.RelPermalink }}" srcset="{{ delimit $srcset ", " }}" sizes="(max-width: 800px) 100vw, 762px" alt="{{ $.PlainText }}" width="{{ $image.Width }}" height="{{ $image.Height }}" loading="lazy" decoding="async"{{ with $.Title }} title="{{ . }}"{{ end }}>
+  {{- else -}}
+    <img src="{{ $destination | safeURL }}" alt="{{ $.PlainText }}" loading="lazy" decoding="async"{{ with $.Title }} title="{{ . }}"{{ end }}>
+  {{- end -}}
+{{- else -}}
+  <img src="{{ $destination | safeURL }}" alt="{{ .PlainText }}" loading="lazy" decoding="async"{{ with .Title }} title="{{ . }}"{{ end }}>
+{{- end -}}

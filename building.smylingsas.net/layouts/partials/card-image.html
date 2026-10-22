@@ -1,5 +1,7 @@
-{{ with .Params.image }}
-  {{ with $img := $.Resources.GetMatch . }}
+{{ $page := .page }}
+{{ $isLCP := .isLCP }}
+{{ with $page.Params.image }}
+  {{ with $img := $page.Resources.GetMatch . }}
 
     {{ $img400 := $img.Fill "400x225" }}
     {{ $img800 := $img.Fill "800x450" }}
@@ -18,19 +20,17 @@
         sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, (max-width: 1920px) 33vw, 80vw"
         width="{{ $img400.Width }}"
         height="{{ $img400.Height }}"
-        alt="{{ with .Params.imageAlt }}{{ . }}{{ else }}{{ $.Title }}{{ end }}"
-        loading="lazy"
-        class="lazy-image"
-        style="background-image: url('{{ $imgLow.RelPermalink }}');" />
+        alt="{{ with $page.Params.imageAlt }}{{ . }}{{ else }}{{ $page.Title }}{{ end }}"
+        {{ if $isLCP }}fetchpriority="high" loading="eager"{{ else }}loading="lazy" class="lazy-image" style="background-image: url('{{ $imgLow.RelPermalink }}');"{{ end }} />
     </picture>
 
-    <noscript>
+    {{ if not $isLCP }}<noscript>
       <img
         src="{{ $img2300.RelPermalink }}"
         width="{{ $img2300.Width }}"
         height="{{ $img2300.Height }}"
-        alt="{{ with .Params.imageAlt }}{{ . }}{{ else }}{{ $.Title }}{{ end }}">
-    </noscript>
+        alt="{{ with $page.Params.imageAlt }}{{ . }}{{ else }}{{ $page.Title }}{{ end }}">
+    </noscript>{{ end }}
 
   {{ else }}
     {{ with resources.Get "images/shrug.svg" }}

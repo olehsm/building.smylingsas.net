@@ -1,7 +1,7 @@
 <a class="item__link" href="{{ .Permalink }}">
     <article class="list-grid-item">
         <div class="visual image-blur-wrapper">
-            {{ partial "card-image.html" . }}
+            {{ partial "card-image.html" (dict "page" .) }}
         </div>
         <div class="item__body">
             <h2 class="item__title">{{ .Title }}</h2>

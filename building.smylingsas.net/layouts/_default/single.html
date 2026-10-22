@@ -32,7 +32,7 @@
 {{ end }}
 
 			<section class="article-image">
-				{{ partial "single/article-image.html" . }}
+				{{ partial "card-image.html" (dict "page" . "isLCP" true) }}
 			</section>
 
 			<section class="article-content" data-pagefind-body>
