@@ -8,7 +8,7 @@ tags:
   - hugo
   - hosting
 author: Ole Halvor Smylingsås
-description: null
+description: Liten guide om hvordan endre build settings i Amplify
 image: aws-logo.jpg
 ---
 <!--more-->

@@ -6,7 +6,7 @@ author: Ole Halvor Smylingsås
 tags: 
     - Raspberry Pi
 pageresources: []
-description: null
+description: Et prosjekt om oppsett av Grow HAT mini og et status-dashboard
 image: finishedgrowpi.jpg
 githubLink: null
 demolink: null
@@ -16,7 +16,7 @@ demolink: null
 
 > Ble litt lei av å sjekke statusen til plantene mine, så jeg forsøker å automatisere det bort.
 
-## Ustyrsliste
+## Utstyrsliste
 * Raspberry Pi 
 * Grow HAT mini
 * Fuktighetssensorer

@@ -6,7 +6,7 @@ pageresources: []
 tags:
   - html
 author: Ole Halvor Smylingsås
-description: null
+description: TIL Anchor-tag i HTML har et "Download"-attributt
 image: category-html.png
 ---
 

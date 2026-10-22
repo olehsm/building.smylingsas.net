@@ -5,7 +5,7 @@ draft: true
 tags: 
     - Inspo
 author: Ole Halvor Smylingsås
-description: null
+description: Link til Arjan Einbu sin nettside
 image: arjan_einbu_homepage.jpg
 externalLink: null
 ---

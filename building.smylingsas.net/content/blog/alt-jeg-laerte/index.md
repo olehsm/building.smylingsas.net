@@ -8,7 +8,7 @@ tags:
     - Containers
     - Javascript
 author: Ole Halvor Smylingsås
-description: null
+description: En kommentar om utviklingen av denne nettsiden
 image: 320hugo_logo.png
 ---
 
@@ -137,7 +137,6 @@ touch layouts/_default/list.html
 baseof.html inneholder skjelettet til nettsiden. Både `<html>`, `<head>` og `<body>` - elementene kan plasseres i denne filen. De andre templatefilene bruker denne filen.
 
 ```html
-<!DOCTYPE html>
 <html lang="no">
     <head>
         <meta charset="utf-8" />
@@ -195,7 +194,7 @@ Endrer innholdet til dette format:
 
 ```yaml
 baseURL: https://building.smylingsas.net/
-languageCode: nb #ISO 639-1 Language Codes
+languageCode: nb
 title: building.smylingsas.net
 module:
    hugoVersion:

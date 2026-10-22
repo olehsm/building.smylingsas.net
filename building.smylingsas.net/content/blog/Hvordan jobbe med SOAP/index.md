@@ -5,7 +5,7 @@ draft: true
 pageresources: []
 tags: null
 author: Ole Halvor Smylingsås
-description: null
+description: En kommentar om jobbe med SOAP.
 image: null
 ---
 

@@ -5,7 +5,7 @@ draft: true
 tags: 
     - A11y
 author: Ole Halvor Smylingsås
-description: null
+description: Lenke til Stark’s Web Accessibility Library
 image: stark.png
 externalLink: https://www.getstark.co/library/collections/
 ---

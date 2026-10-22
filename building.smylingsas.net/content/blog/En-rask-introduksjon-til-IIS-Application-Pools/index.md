@@ -6,7 +6,7 @@ pageresources: []
 tags:
   - hosting
 author: Ole Halvor Smylingsås
-description: null
+description: En introduksjon til Application pools i IIS
 image: pool.jpg
 ---
 

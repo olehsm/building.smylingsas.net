@@ -5,7 +5,7 @@ draft: true
 tags:
     - Inspo
 author: Ole Halvor Smylingsås
-description: null
+description: Lenke til Kent C. Dodds sin nettside
 image: kent_c_dodds_homepage.jpg
 externalLink: null
 ---

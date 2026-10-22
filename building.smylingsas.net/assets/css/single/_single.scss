@@ -68,8 +68,7 @@
     }
 
     code {
-        background: var(--primary-color);
-        color: var(--text-color);
+
         padding-block: 0.2em;
         padding-inline: 0.4em;
         border-radius: var(--default-border-radius);
@@ -78,16 +77,15 @@
     }
 
     pre {
-        background: var(--primary-color);
-        color: var(--text-color);
+        background-color: var(--card-bg) !important;
         padding: 1em;
         border-radius: var(--default-border-radius);
         overflow-x: auto;
+        border:1px solid var(--primary-color);
         margin-block-end: 1.5rem;
         margin-inline: 0;
 
         code {
-            background: none;
             color: inherit;
             padding: 0;
             border-radius: var(--default-border-radius);

@@ -5,7 +5,7 @@ draft: true
 tags: 
     - Tools
 author: Ole Halvor Smylingsås
-description: null
+description: Lenke til verktøyet Cyberchef. Som gir deg mange muligheter med ulike krypteringer og konverteringer
 image: cyberchef-128x128.png
 externalLink: null
 ---

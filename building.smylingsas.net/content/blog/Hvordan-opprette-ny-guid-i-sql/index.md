@@ -6,7 +6,7 @@ pageresources: []
 tags:
   - sql
 author: Ole Halvor Smylingsås
-description: null
+description: En rask guide for hvordan man oppretter ny GUID i T-SQL
 image: microsoft-sql-server4529.jpg
 ---
 TIL: Hvordan opprette GUID?

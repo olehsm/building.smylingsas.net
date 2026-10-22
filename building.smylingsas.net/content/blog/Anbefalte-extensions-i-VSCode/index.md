@@ -6,7 +6,7 @@ pageresources: []
 tags:
   - tools
 author: Ole Halvor Smylingsås
-description: null
+description: Todo over hvordan man setter opp anbefalte extensions i et VS Code-prosjekt
 image: visual-studio-icon.png
 ---
 Sett opp anbefalte extensions for et prosjekt i Visual Studio Code

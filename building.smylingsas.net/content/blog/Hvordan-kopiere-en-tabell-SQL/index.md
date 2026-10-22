@@ -6,7 +6,7 @@ pageresources: []
 tags:
   - sql
 author: Ole Halvor Smylingsås
-description: null
+description: Kjapp tips om hvordan man kopierer en tabell i T-SQL
 image: microsoft-sql-server4529.jpg
 ---
 TIL: Temporær kopi av tabell i SQL Server

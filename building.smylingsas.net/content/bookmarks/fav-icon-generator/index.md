@@ -6,7 +6,7 @@ tags:
     - Tools
 pageresources: []
 author: Ole Halvor Smylingsås
-description: null
+description: Link til verktøyet Favicon generator
 image: favicongenerator.png
 externalLink: 'https://formito.com/tools/favicon'
 ---
