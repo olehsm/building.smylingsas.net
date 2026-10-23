@@ -15,6 +15,22 @@
 
 <!-- Center Section: Search -->
 <div class="header-center">
+    <div class="navigation-controller">
+        {{ with .Next }}
+            <a href="{{ .RelPermalink }}" class="nav-button" title="Gå til {{ .Title }}" aria-label="Forrige">
+                <span>
+                    {{ partial "icons/left-arrow.svg.html" . }}
+                </span>
+            </a>
+        {{ end }}
+        {{ with .Prev }}
+            <a href="{{ .RelPermalink }}" class="nav-button" title="Gå til {{ .Title }}" aria-label="Neste">
+                <span>
+                    {{ partial "icons/right-arrow.svg.html" . }}
+                </span>
+            </a> 
+        {{ end }}
+    </div>
     <input type="text" id="searchInput" placeholder="Søk..." />
 </div>
 
