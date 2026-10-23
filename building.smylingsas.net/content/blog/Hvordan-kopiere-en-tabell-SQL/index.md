@@ -17,7 +17,7 @@ SELECT * INTO olebak
 FROM Animals;
 ```
 
-### Syntax
+## Syntax
 ```sql
 SELECT *
     INTO newtable

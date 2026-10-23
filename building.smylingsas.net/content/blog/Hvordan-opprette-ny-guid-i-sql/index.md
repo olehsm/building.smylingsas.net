@@ -23,7 +23,7 @@ NEWID()
 ```sql
 SELECT NEWID();
 ```
-#### Som en variabel:
+### Som en variabel:
 ```sql
 DECLARE @myid uniqueidentifier  
 SET @myid: NEWID()  
