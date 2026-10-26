@@ -1,0 +1,26 @@
+{{ define "main" }}
+<div class="container">
+    <div class="layout layout--list">
+        {{ partial "hero.html" . }}
+
+        <section class="cards">
+                <div class="cards-toolbar">
+                    <div class="layout-toggle">
+                        <button id="grid-view-btn" class="layout-button active" type="button" aria-label="Grid view">
+                            {{ partial "icons/grid.svg.html" . }}
+                        </button>
+                        <button id="list-view-btn" class="layout-button" type="button" aria-label="List view">
+                            {{ partial "icons/list.svg.html" . }}
+                        </button>
+                    </div>
+                </div>
+                <ul class="list-grid">
+                    {{ $pages := where site.RegularPages "Type" "in" (slice "blog" "bookmarks" "projects") }}
+                    {{ range sort $pages "Date" "desc" }}
+                        <li>{{ .Render "summary" }}</li>
+                    {{ end }}
+                </ul>    
+        </section>
+    </div>
+</div>
+{{ end }}
