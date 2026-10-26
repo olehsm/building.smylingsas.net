@@ -8,7 +8,7 @@
 
         {{ range .Site.Menus.main }}
         <li>
-            <a href="{{ .URL }}" class="site-nav-item{{ if or (eq .URL $current) (and (ne .URL "/") (ne .URL "") (strings.HasPrefix $current .URL)) }} is-active{{ end }}" title="{{ .Name }}" aria-label="{{ .Name }}"{{ if or (eq .URL $current) (and (ne .URL "/") (ne .URL "") (strings.HasPrefix $current .URL)) }} aria-current="page"{{ end }}>
+            <a href="{{ .URL }}" class="site-nav-item{{ if or (eq .URL $current) (and (ne .URL "/") (ne .URL "") (strings.HasPrefix $current .URL)) }} is-active{{ end }}" title="{{ .Identifier }}" aria-label="{{ .Name }}"{{ if or (eq .URL $current) (and (ne .URL "/") (ne .URL "") (strings.HasPrefix $current .URL)) }} aria-current="page"{{ end }}>
                 {{ with .Params.icon }}
                     {{ partial (printf "icons/%s.svg.html" .) . }}
                 {{ end }}
