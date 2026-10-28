@@ -29,7 +29,8 @@
     h4,
     h5,
     h6 {
-        margin-block-end: 1.5rem;
+        margin-block-start: 3rem;
+        margin-block-end: 0.5rem;
         font-weight: 600;
         line-height: 1.25;
 
@@ -110,8 +111,7 @@
     blockquote {
         border-inline-start: 4px solid var(--secondary-color);
         padding-block: 1rem;
-        padding-inline: 0;
-        padding-inline-start: 1rem;
+        padding-inline: 1rem;
         margin-block-end: 1rem;
         margin-inline: 0;
         font-style: italic;
@@ -154,7 +154,7 @@
             a {
                 color: inherit;
                 text-decoration: none;
-                background-color: var(--box-background);
+                background-color: var(--primary-color);
                 padding:0.5em;
                 border: 1px solid var(--primary-color);
             }
