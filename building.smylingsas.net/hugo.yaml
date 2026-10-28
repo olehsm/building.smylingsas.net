@@ -103,6 +103,7 @@ params:
     images:
         - site-feature-image.jpg
     title: Smylingsas.net
+    defaultDateformat: "2006-01-02"
 
 pagination:
     pagerSize: 10
