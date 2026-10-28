@@ -9,7 +9,7 @@
 {{ end }}
 {{hugo.Generator}}
 
-<title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
+<title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Site.Title }} | {{ .Title }}{{ end }}</title>
 
 <!-- Open Graph meta tags -->
 {{ template "_internal/opengraph.html" . }}
