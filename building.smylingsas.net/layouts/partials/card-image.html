@@ -1,56 +1,56 @@
 {{ $page := .page }}
 {{ $isLCP := .isLCP }}
 {{ with $page.Params.image }}
-  {{ with $img := $page.Resources.GetMatch . }}
+    {{ with $img := $page.Resources.GetMatch . }}
 
-    {{ $img400 := $img.Fill "400x225" }}
-    {{ $img800 := $img.Fill "800x450" }}
-    {{ $img1200 := $img.Fill "1200x675" }}
-    {{ $img2300 := $img.Fill "2300x1294" }}
-    {{ $imgLow := $img.Fill "20x11" }}
+        {{ $img400 := $img.Fill "400x225" }}
+        {{ $img800 := $img.Fill "800x450" }}
+        {{ $img1200 := $img.Fill "1200x675" }}
+        {{ $img2300 := $img.Fill "2300x1294" }}
+        {{ $imgLow := $img.Fill "20x11" }}
 
-    <picture>
-      <source
-        type="{{ $img.MediaType }}"
-        srcset="{{ $img400.RelPermalink }} 400w, {{ $img800.RelPermalink }} 800w, {{ $img1200.RelPermalink }} 1200w, {{ $img2300.RelPermalink }} 2300w"
-        sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, (max-width: 1920px) 33vw, 80vw">
-      <img
-        src="{{ $img2300.RelPermalink }}"
-        srcset="{{ $img400.RelPermalink }} 400w, {{ $img800.RelPermalink }} 800w, {{ $img1200.RelPermalink }} 1200w, {{ $img2300.RelPermalink }} 2300w"
-        sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, (max-width: 1920px) 33vw, 80vw"
-        width="{{ $img400.Width }}"
-        height="{{ $img400.Height }}"
-        alt="{{ with $page.Params.imageAlt }}{{ . }}{{ else }}{{ $page.Title }}{{ end }}"
-        {{ if $isLCP }}fetchpriority="high" loading="eager"{{ else }}loading="lazy" class="lazy-image" style="background-image: url('{{ $imgLow.RelPermalink }}');"{{ end }} />
-    </picture>
+        <picture>
+            <source
+                type="{{ $img.MediaType }}"
+                srcset="{{ $img400.RelPermalink }} 400w, {{ $img800.RelPermalink }} 800w, {{ $img1200.RelPermalink }} 1200w, {{ $img2300.RelPermalink }} 2300w"
+                sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, (max-width: 1920px) 33vw, 80vw">
+            <img
+                src="{{ $img2300.RelPermalink }}"
+                srcset="{{ $img400.RelPermalink }} 400w, {{ $img800.RelPermalink }} 800w, {{ $img1200.RelPermalink }} 1200w, {{ $img2300.RelPermalink }} 2300w"
+                sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, (max-width: 1920px) 33vw, 80vw"
+                width="{{ $img400.Width }}"
+                height="{{ $img400.Height }}"
+                alt="{{ with $page.Params.imageAlt }}{{ . }}{{ else }}{{ $page.Title }}{{ end }}"
+                {{ if $isLCP }}fetchpriority="high" loading="eager"{{ else }}loading="lazy" class="lazy-image" style="background-image: url('{{ $imgLow.RelPermalink }}');"{{ end }} />
+        </picture>
 
-    {{ if not $isLCP }}<noscript>
-      <img
-        src="{{ $img2300.RelPermalink }}"
-        width="{{ $img2300.Width }}"
-        height="{{ $img2300.Height }}"
-        alt="{{ with $page.Params.imageAlt }}{{ . }}{{ else }}{{ $page.Title }}{{ end }}">
-    </noscript>{{ end }}
+        {{ if not $isLCP }}<noscript>
+            <img
+                src="{{ $img2300.RelPermalink }}"
+                width="{{ $img2300.Width }}"
+                height="{{ $img2300.Height }}"
+                alt="{{ with $page.Params.imageAlt }}{{ . }}{{ else }}{{ $page.Title }}{{ end }}">
+        </noscript>{{ end }}
 
-  {{ else }}
-    {{ with resources.Get "images/shrug.svg" }}
-      <img 
-        src="{{ .RelPermalink }}" 
-        alt="No image found." 
-        title="Default image" 
-        width="300" 
-        height="225"
-        loading="lazy">
+    {{ else }}
+        {{ with resources.Get "images/shrug.svg" }}
+            <img 
+                src="{{ .RelPermalink }}" 
+                alt="No image found." 
+                title="Default image" 
+                width="300" 
+                height="225"
+                loading="lazy">
+        {{ end }}
     {{ end }}
-  {{ end }}
 {{ else }}
-  {{ with resources.Get "images/shrug.svg" }}
-    <img 
-      src="{{ .RelPermalink }}" 
-      alt="No image specified." 
-      title="Default image" 
-      width="300" 
-      height="225"
-      loading="lazy">
-  {{ end }}
+    {{ with resources.Get "images/shrug.svg" }}
+        <img 
+            src="{{ .RelPermalink }}" 
+            alt="No image specified." 
+            title="Default image" 
+            width="300" 
+            height="225"
+            loading="lazy">
+    {{ end }}
 {{ end }}

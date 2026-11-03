@@ -1,46 +1,32 @@
 <aside class="article-aside">
-	<div class="container">
-		<section class="related-articles">
-			<h2 class="h2-list">Relaterte poster</h2>
-			{{ $related := .Site.RegularPages.Related . | first 3 }}
-			{{ if $related }}
-				<ul>
-					{{ range $related }}
-							<li>{{ .Render "summary" }}</li>
-					{{ end }}
-				</ul>
-			{{ else }}
-				Ingen relaterte artikler funnet.
-			{{ end }}
-		</section>
-		
-		<section class="next-previous">
-			{{ with .Next }}
-			<div class="next-article">
-					<h2>Neste artikkel</h2>
-					{{ .Render "summary" }}
-			</div>
-			{{ end }}
-			{{ with .Prev }}
-			<div class="previous-article">
-				<h2>Forrige artikkel</h2>
-				{{ .Render "summary" }}
-			</div>
-			{{ end }}
-		</section>
-{{/*  <section>
-	<div class="container">
-		{{ with .Params.tags }}
-			{{ range $index, $element := . }}
-				<h2>Artikler med taggen: {{ $element }}</h2>
-				<ul>
-					{{ range where $page.Site.RegularPages "Params.tags" "intersect" (slice $element) }}
-						<li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
-					{{ end }}
-				</ul>
-			{{ end }}
-		{{ end }}
-	</div>
-</section>  */}}
-	</div>
+    <div class="container">
+        <section class="related-articles">
+            <h2 class="h2-list">Relaterte poster</h2>
+            {{ $related := .Site.RegularPages.Related . | first 3 }}
+            {{ if $related }}
+                <ul>
+                    {{ range $related }}
+                            <li>{{ .Render "summary" }}</li>
+                    {{ end }}
+                </ul>
+            {{ else }}
+                Ingen relaterte artikler funnet.
+            {{ end }}
+        </section>
+
+        <section class="next-previous">
+            {{ with .Next }}
+                <div class="next-article">
+                    <h2>Neste artikkel</h2>
+                    {{ .Render "summary" }}
+                </div>
+            {{ end }}
+            {{ with .Prev }}
+                <div class="previous-article">
+                    <h2>Forrige artikkel</h2>
+                    {{ .Render "summary" }}
+                </div>
+            {{ end }}
+        </section>
+    </div>
 </aside>
