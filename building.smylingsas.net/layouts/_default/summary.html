@@ -1,18 +1,30 @@
-<a class="item__link" href="{{ .Permalink }}">
-    <article class="list-grid-item">
-        <div class="visual image-blur-wrapper">
-            {{ partial "card-image.html" (dict "page" .) }}
-        </div>
-        <div class="item__body">
-            <h2 class="item__title">{{ .Title }}</h2>
-            {{.Summary}}
-            {{ if eq .Kind "term" }}
-                <p>{{ .Pages.Len }} {{ if eq .Pages.Len 1 }}innlegg{{ else }}innlegg{{ end }}</p>
-            {{ else }}
-                <time datetime="{{ .Date.Format "Mon, Jan 2, 2006" }}">
-                    {{ .Date.Format .Site.Params.defaultDateformat }}
-                </time>
+<article class="list-grid-item">
+    <div class="visual image-blur-wrapper">
+        {{ partial "card-image.html" (dict "page" .) }}
+    </div>
+
+    <div class="item__body">
+        <h2 class="item__title">
+            <a class="item__link" href="{{ .RelPermalink }}">{{ .Title }}</a>
+        </h2>
+        {{ .Summary }}
+        {{ if eq .Kind "term" }}
+            <p>{{ .Pages.Len }} {{ if eq .Pages.Len 1 }}innlegg{{ else }}innlegg{{ end }}</p>
+        {{ else }}
+            
+            {{ with .GetTerms "tags" }}
+                <section class="article-tags">
+                    <ul class="tag-list">
+                        {{ range . }}
+                            <li class="item__tag"><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
+                        {{ end }}
+                    </ul>
+                </section>
             {{ end }}
-        </div>
-    </article>
-</a>
+
+            <time datetime="{{ .Date.Format "Mon, Jan 2, 2006" }}">
+                {{ .Date.Format .Site.Params.defaultDateformat }}
+            </time>
+        {{ end }}
+    </div>
+</article>

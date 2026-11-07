@@ -13,11 +13,11 @@
                 {{ partial "single/article-meta.html" . }}
             </section>
 
-            {{ with .Params.tags }}
+            {{ with $page.GetTerms "tags" }}
                 <section class="article-tags">
                     <ul class="tag-list">
-                        {{ range $index, $element := . }}
-                            <li><a href="/tags/{{ $element | urlize }}">{{ $element }}</a></li>
+                        {{ range . }}
+                            <li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
                         {{ end }}
                     </ul>
                     
@@ -32,11 +32,11 @@
                 {{- .Content -}}
             </section>
 
-            {{ with .Params.tags }}
+            {{ with $page.GetTerms "tags" }}
                 <section class="article-tags">
                     <ul class="tag-list">
-                        {{ range $index, $element := . }}
-                            <li><a href="/tags/{{ $element | urlize }}">{{ $element }}</a></li>
+                        {{ range . }}
+                            <li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
                         {{ end }}
                     </ul>
                 </section>
