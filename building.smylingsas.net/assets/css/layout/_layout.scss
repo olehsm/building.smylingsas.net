@@ -6,6 +6,15 @@
     grid-template-areas:
         "header header"
         "sidebar main";
+
+    // @media (max-width: 768px) {
+    //     grid-template-columns: 1fr;
+    //     grid-template-rows: var(--header-height) 1fr;
+    //     grid-template-areas:
+    //         "header"
+    //         "main"
+    //         "sidebar";  
+    // }
 }
 
 
@@ -32,6 +41,14 @@
     display: flex;
     flex-direction: column;
     gap: var(--spacing-sm);
+
+    // @media (max-width: 768px) {
+    //     order: 1;
+    //     flex-direction: row;
+    //     overflow-x: auto;
+    //     overflow-y: hidden;
+    //     padding-inline: 0.5em;  
+    // }
 }
 
 
@@ -47,6 +64,7 @@
     border: 1px solid var(--border-color);
     border-radius: var(--default-border-radius);
     min-block-size: 0;
+    content-visibility: auto; // https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/content-visibility
 }
 
 
@@ -54,4 +72,8 @@
     max-width: 1350px;
     padding-inline: clamp(1em, 2.5vw, 4em);
     margin-inline: auto;
+
+    // @media (max-width: 768px) {
+    //     max-width: 100%;
+    // }
 }

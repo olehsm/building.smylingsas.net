@@ -95,20 +95,20 @@
     }
 }
 
-.item__link::after {
+.list-grid .item__link::after {
     content: "";
     position: absolute;
     inset: 0;
 }
 
-.article-tags {
+.list-grid .article-tags {
     margin-block-start: 0.75em;
     margin-block-end: 0;
     position: relative;
     z-index: 1;
 }
 
-.item__body time {
+.list-grid .item__body time {
     margin-block-start: auto;
     padding-block-start: 0.5em;
     opacity: 0.5;
