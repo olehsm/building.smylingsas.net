@@ -76,3 +76,21 @@
 .theme-icon.active {
     display: block;
 }
+
+
+.navigation-controller {
+    a {
+        
+        svg {
+            display: inline-block;
+            width: 1em;
+            height: 1em;
+            margin-inline-start: 0.5rem;
+            vertical-align: middle;
+            color: var(--text-color);
+            &:hover {
+                color: var(--secondary-color);
+            }
+        }
+    }
+}

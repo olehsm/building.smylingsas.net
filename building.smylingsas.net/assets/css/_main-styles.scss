@@ -17,11 +17,6 @@ h1 {
 }
 
 
-p {
-    font-size: var(--font-sm);
-}
-
-
 a {
     text-decoration: none;
 }
@@ -31,21 +26,4 @@ ol,
 li {
     margin: 0;
     padding: 0;
-}
-
-.navigation-controller {
-    a {
-        
-        svg {
-            display: inline-block;
-            width: 1em;
-            height: 1em;
-            margin-inline-start: 0.5rem;
-            vertical-align: middle;
-            color: var(--text-color);
-            &:hover {
-                color: var(--secondary-color);
-            }
-        }
-    }
 }
