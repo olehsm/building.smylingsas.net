@@ -64,6 +64,8 @@
     border: 1px solid var(--border-color);
     border-radius: var(--default-border-radius);
     min-block-size: 0;
+    scrollbar-color: var(--secondary-color) var(--box-background);
+    scrollbar-width: thin; // https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/scrollbar-color
     content-visibility: auto; // https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/content-visibility
 }
 
