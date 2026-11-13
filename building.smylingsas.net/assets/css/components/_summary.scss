@@ -26,6 +26,7 @@
     aspect-ratio: 16 / 9;
     overflow: hidden;
     border-radius: 4px 4px 0 0;
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 1rem), 0 100%);
 
     picture {
         display: block;
@@ -43,11 +44,6 @@
     }
 }
 
-@media (prefers-reduced-motion: reduce) {
-    .visual img {
-        transition: none;
-    }
-}
 
 .image-blur-wrapper {
     position: relative;
