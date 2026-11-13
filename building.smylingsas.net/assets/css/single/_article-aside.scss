@@ -45,4 +45,10 @@
     .visual {
         margin-block-end: 0.5em;   
     }
+
+    .related-articles ul {
+        display: flex;
+        flex-direction: column;
+        row-gap: 1.5em;
+    }
 }
