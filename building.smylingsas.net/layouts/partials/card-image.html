@@ -1,7 +1,13 @@
 {{ $page := .page }}
 {{ $isLCP := .isLCP }}
+{{ $img := false }}
 {{ with $page.Params.image }}
-    {{ with $img := $page.Resources.GetMatch . }}
+    {{ $img = $page.Resources.GetMatch . }}
+    {{ if not $img }}
+        {{ $img = resources.Get (printf "images/%s" .) }}
+    {{ end }}
+{{ end }}
+{{ with $img }}
 
         {{ $img400 := $img.Fill "400x225" }}
         {{ $img800 := $img.Fill "800x450" }}
@@ -32,22 +38,11 @@
                 alt="{{ with $page.Params.imageAlt }}{{ . }}{{ else }}{{ $page.Title }}{{ end }}">
         </noscript>{{ end }}
 
-    {{ else }}
-        {{ with resources.Get "images/shrug.svg" }}
-            <img 
-                src="{{ .RelPermalink }}" 
-                alt="No image found." 
-                title="Default image" 
-                width="300" 
-                height="225"
-                loading="lazy">
-        {{ end }}
-    {{ end }}
 {{ else }}
     {{ with resources.Get "images/shrug.svg" }}
         <img 
             src="{{ .RelPermalink }}" 
-            alt="No image specified." 
+            alt="{{ if $page.Params.image }}No image found.{{ else }}No image specified.{{ end }}"
             title="Default image" 
             width="300" 
             height="225"
